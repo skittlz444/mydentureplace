@@ -1,0 +1,3 @@
+.inheritTest {
+	composes: notGlobal from '../../../shared.module.css';
+}
