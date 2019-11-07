@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:global .blueText{
+	color:blue;
+}
+
+.notGlobal{
+	color:green;
+}
