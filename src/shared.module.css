@@ -12,10 +12,11 @@ code {
     monospace;
 }
 
-:global .blueText{
-	color:blue;
-}
-
 .notGlobal{
 	color:green;
+}
+
+:global .container{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
