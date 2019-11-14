@@ -1,0 +1,25 @@
+.phone{
+	font-weight: bold;	
+}
+
+.headerAction{
+	color:black;
+}
+
+.headerAction:hover{
+	text-decoration: none;
+}
+
+.lgContactInfo{
+	padding-top: 1rem;
+}
+
+.headerContainer{
+	max-width:100% !important;
+	/*background-color:#FBEEC1;*/
+	height: 20vh;
+}
+
+.headerImage{
+	height: 15vh;
+}

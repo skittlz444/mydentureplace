@@ -11,8 +11,4 @@ describe('<Home />', () => {
 	it('shallow renders without crashing', ()=>{
 		shallow(<Home />);
 	});
-
-	it('full renders without crashing', ()=>{
-		mount(<Home />);
-	});
 });
