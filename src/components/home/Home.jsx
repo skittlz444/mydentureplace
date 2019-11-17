@@ -42,9 +42,9 @@ export default class Home extends React.Component{
 										<hr/>
 										<span className="flex justify-content-center">
 											<Button onClick={this.handleGetInTouchClick} variant="light">
-												<h4>
+												<h3 className={styles.actionButtonText}>
 													Get in touch
-												</h4>
+												</h3>
 											</Button>
 										</span>
 									</div>
@@ -76,24 +76,24 @@ export default class Home extends React.Component{
 								<Image src={leftImage} className={styles.leftImage} />
 							</Col>
 							<Col>
-							<h4>
-								Before you get new dentures, you should have all the information required help you make the right decision.
-							</h4>
-							<h4>
-								Our aim is to help you to address your concerns and questions.
-							</h4>
-							<h4>
-								We prescribe and make your dentures directly to you.
-							</h4>
-							<h4>
-								Custom made right here, for your inh4idual smile.
-							</h4>
-							<h4>
-								Naturally shaped teeth from quality European manufacturers.
-							</h4>
-							<h4>
-								Our natural looking dentures consider you and your specific needs
-							</h4>
+								<h4>
+									Before you get new dentures, you should have all the information required help you make the right decision.
+								</h4>
+								<h4>
+									Our aim is to help you to address your concerns and questions.
+								</h4>
+								<h4>
+									We prescribe and make your dentures directly to you.
+								</h4>
+								<h4>
+									Custom made right here, for your inh4idual smile.
+								</h4>
+								<h4>
+									Naturally shaped teeth from quality European manufacturers.
+								</h4>
+								<h4>
+									Our natural looking dentures consider you and your specific needs
+								</h4>
 							</Col>
 						</Row>
 					</Container>

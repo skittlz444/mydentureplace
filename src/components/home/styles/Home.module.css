@@ -27,3 +27,9 @@
 		max-height: 30rem;
 	}
 }
+
+.actionButtonText{
+  margin-top: 0.6rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
