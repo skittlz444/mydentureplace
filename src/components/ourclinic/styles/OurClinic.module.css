@@ -1,3 +1,31 @@
 .inheritTest {
 	composes: notGlobal from '../../../shared.module.css';
 }
+
+.ourClinicContainer{
+	background-color: #FBEEC1;
+	width:100%;
+	max-width: 100%!important;
+}
+
+@media (max-width: 600px){
+	.leftImage{
+		max-height: 15rem;
+		padding-bottom: 2rem;
+	}	
+	.rightImage{
+		max-height: 15rem;
+		padding-top: 2rem;
+	}
+}
+@media (min-width: 601px){
+	.rightImage, .leftImage{
+		max-height: 15rem;
+	}
+}
+
+.actionButtonText{
+  margin-top: 0.6rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
