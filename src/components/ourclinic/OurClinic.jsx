@@ -3,7 +3,7 @@ import styles from './styles/OurClinic.module.css';
 import {Row, Col, Container, Image, Button} from 'react-bootstrap';
 
 import image1 from './img/4.-My-Denture-Place-Waiting-Room-300x225.jpg'
-import image2 from './img/Our-Building2-e1386743230259.png'
+import image2 from './img/5.-Dentist-Chair-300x225.jpg'
 
 export default class OurClinic extends React.Component{
 	constructor(props){

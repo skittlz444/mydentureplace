@@ -1,12 +1,10 @@
 import React from 'react';
 import {Image, Carousel} from 'react-bootstrap';
 
-import styles from './styles/HomeCarousel.module.css';
 import image1 from './img/Our-Building2-e1386743230259.png';
-import image2 from './img/1.-Welcome-to-My-Denture-Place-300x225.jpg';
+import image2 from './img/2.-My-Denture-Place-Entry-300x225.jpg';
 import image3 from './img/3.-BPS-Cerified-Laboratory-300x225.jpg';
 import image4 from './img/7.-Dentist-At-Work-300x225.jpg';
-import image5 from './img/Coffee.png';
 
 export default class HomeCarousel extends React.Component{
 	render(){
