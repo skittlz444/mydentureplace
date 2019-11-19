@@ -1,7 +1,3 @@
-.inheritTest {
-	composes: notGlobal from '../../../shared.module.css';
-}
-
 .ourClinicContainer{
 	background-color: #FBEEC1;
 	width:100%;
