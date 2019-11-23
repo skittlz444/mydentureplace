@@ -13,16 +13,18 @@ export default class NavBar extends React.Component {
 	scroll (el) {
 	    var offset = document.getElementById('navbar').offsetHeight;
 	    offset = offset > 150 ? 56 : offset;
-	    window.scrollTo({ top: el.offsetTop - offset, left: 0, behavior: 'smooth' })
+	    setTimeout(() =>{
+	    	window.scrollTo({ top: el.offsetTop - offset, left: 0, behavior: 'smooth' });
+	    }, 300);
   	}
 
 	render(){
 		return (
-			<Navbar id="navbar" bg="dark" variant="dark" expand="md" collapseOnSelect sticky="top" className="justify-content-end flex">
+			<Navbar id="navbar" expand="md" collapseOnSelect sticky="top" className={styles.navBar + " justify-content-end flex"}>
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse>
 					<Container className={styles.linkContainer + " justify-content-end flex"}>
-						<Nav className={styles.nav}>
+						<Nav className={styles.navbarv}>
 							<Nav.Link as='span' eventKey>
 								<Link className={' nav-link'} to={'/home#home'} scroll={el => this.scroll(el)}>Home</Link>
 							</Nav.Link>

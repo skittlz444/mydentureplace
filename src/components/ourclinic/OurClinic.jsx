@@ -25,6 +25,7 @@ export default class OurClinic extends React.Component{
 								Our Clinic
 							</h2>
 						</Row>
+						<hr/>
 						<Row>
 							<Col lg={4} md={12}>
 								<Image src={image1} className={styles.leftImage}/>

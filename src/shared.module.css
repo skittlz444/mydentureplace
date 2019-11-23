@@ -34,3 +34,7 @@ code {
 :global .flex{
   display: flex;
 }
+
+:global .nav-link.active, :global .nav-link{
+  color: rgba(0, 0, 0, 0.5) !important;
+}
