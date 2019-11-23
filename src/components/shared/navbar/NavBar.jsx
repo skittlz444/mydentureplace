@@ -11,7 +11,8 @@ export default class NavBar extends React.Component {
 	}
 
 	scroll (el) {
-	    const offset = document.getElementById('navbar').offsetHeight;
+	    var offset = document.getElementById('navbar').offsetHeight;
+	    offset = offset > 150 ? 56 : offset;
 	    window.scrollTo({ top: el.offsetTop - offset, left: 0, behavior: 'smooth' })
   	}
 
