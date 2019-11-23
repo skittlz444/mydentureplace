@@ -24,7 +24,7 @@ export default class NavBar extends React.Component {
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse>
 					<Container className={styles.linkContainer + " justify-content-end flex"}>
-						<Nav className={styles.navbarv}>
+						<Nav className={styles.nav}>
 							<Nav.Link as='span' eventKey>
 								<Link className={' nav-link'} to={'/home#home'} scroll={el => this.scroll(el)}>Home</Link>
 							</Nav.Link>
