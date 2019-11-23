@@ -18,7 +18,7 @@ export default class OurClinic extends React.Component{
 	render(){
 		return (
 			<React.Fragment>
-				<Container className={styles.ourClinicContainer}>
+				<Container className={styles.ourClinicContainer} id="ourclinic">
 					<Container>
 						<Row className="justify-content-center flex">
 							<h2>

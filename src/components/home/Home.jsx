@@ -4,6 +4,7 @@ import MediaQuery from 'react-responsive';
 
 import HomeCarousel from './HomeCarousel';
 import leftImage from './img/Restoring-Your-Smile.jpg';
+import OurClinic from '@c/ourclinic/OurClinic';
 import styles from './styles/Home.module.css';
 
 export default class Home extends React.Component{
@@ -19,7 +20,7 @@ export default class Home extends React.Component{
 	render(){
 		return (
 			<React.Fragment>
-				<Jumbotron fluid className={styles.jumboContainer}>
+				<Jumbotron fluid className={styles.jumboContainer} id="home">
 					<Container>
 						<Row>
 							<Col className='justify-content-center flex'>
@@ -96,6 +97,7 @@ export default class Home extends React.Component{
 						</Col>
 					</Row>
 				</Container>
+				<OurClinic/>
 			</React.Fragment>
 		);
 	}

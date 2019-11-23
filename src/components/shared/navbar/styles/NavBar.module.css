@@ -1,0 +1,15 @@
+@media (max-width: 767){
+	.linkContainer{
+		text-align:right;
+	}
+}
+@media (min-width: 768px){
+	.linkContainer{
+		max-height: 3rem;
+		text-align:right;
+	}
+}
+
+.nav{
+	margin-top: -1.2rem;
+}
