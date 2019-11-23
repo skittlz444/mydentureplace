@@ -1,5 +1,4 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import {Nav, Navbar, Container} from 'react-bootstrap';
 import {HashLink as Link} from 'react-router-hash-link';
 

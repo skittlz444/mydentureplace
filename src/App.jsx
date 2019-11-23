@@ -1,10 +1,9 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 import '~/shared.module.css';
 import WOW from 'wowjs';
 
 import Home from '@c/home/Home';
-import OurClinic from '@c/ourclinic/OurClinic';
 import ContactHeader from '@s/contactheader/ContactHeader';
 import Footer from '@s/footer/Footer';
 import NavBar from '@s/navbar/NavBar';
