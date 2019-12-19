@@ -9,8 +9,8 @@ import Footer from "@s/footer/Footer";
 import NavBar from "@s/navbar/NavBar";
 import NotFound from "@s/notfound/NotFound";
 
-require("animate.css");
-require("bootstrap");
+require('animate.css');
+require('bootstrap');
 
 export default class App extends React.Component {
   componentDidMount() {
