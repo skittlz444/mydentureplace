@@ -1,0 +1,9 @@
+.actionButtonText {
+    margin-top: 0.6rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.modal {
+    width: 90%;
+    max-width: 90% !important;
+}

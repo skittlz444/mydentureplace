@@ -5,6 +5,7 @@ import MediaQuery from 'react-responsive';
 import HomeCarousel from './HomeCarousel';
 import leftImage from './img/Restoring-Your-Smile.jpg';
 import OurClinic from '@c/ourclinic/OurClinic';
+import ContactModal from '@c/contactmodal/ContactModal';
 import styles from './styles/Home.module.css';
 
 export default class Home extends React.Component{
@@ -39,14 +40,8 @@ export default class Home extends React.Component{
 										<li><h4>Problems with ill-fitting dentures?</h4></li>
 										<li><h4>Looking for a mouthguard that fits?</h4></li>
 									</ul>
-									<hr/>
-									<span className="flex justify-content-center">
-										<Button onClick={this.handleGetInTouchClick} variant="light">
-											<h3 className={styles.actionButtonText}>
-												Get in touch
-											</h3>
-										</Button>
-									</span>
+                                    <hr />
+                                    <ContactModal />
 								</div>
 							</Col>
 							<MediaQuery maxWidth={991}>
