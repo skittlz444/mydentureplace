@@ -1,0 +1,15 @@
+.notFoundText {
+    text-align: center;
+    padding: 10%;
+    padding-top: 15vh;
+}
+
+.notFoundContainer {
+    min-height: 70vh;
+}
+.centerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
