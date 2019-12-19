@@ -2,13 +2,6 @@
 	text-align: center;
 }
 
-.contactFormContainer {
-    background-color: #659DBD;
-    width: 100%;
-    max-width: 100% !important;
-    color: white;
-}
-
 .homeInfoCol{
 	display: flex;
 	align-items: center;

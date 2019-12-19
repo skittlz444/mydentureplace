@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import ContactForm from "@c/contactform/ContactForm";
 import styles from "./styles/ContactPage.module.css";
 
@@ -14,8 +15,10 @@ export default class ContactPage extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <ContactForm />
+        <React.Fragment>
+            <Container className={styles.contactFormContainer}>
+                <ContactForm />
+            </Container>
       </React.Fragment>
     );
   }

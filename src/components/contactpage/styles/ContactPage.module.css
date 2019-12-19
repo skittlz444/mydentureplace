@@ -28,6 +28,13 @@
 	}
 }
 
+.contactFormContainer {
+    background-color: #659DBD;
+    width: 100%;
+    max-width: 100% !important;
+    color: white;
+}
+
 .actionButtonText{
   margin-top: 0.6rem;
   margin-right: 1rem;

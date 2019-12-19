@@ -91,7 +91,7 @@ export default class ContactForm extends React.Component {
         const spinner = <Spinner animation="border" />;
         return (
             <React.Fragment>
-                <Container className={styles.contactFormContainer}>
+                
                     <Form ref={this.form} onSubmit={this.handleSubmit} style={{ marginLeft: "10%", marginRight: "10%" }}>
                         <Row className="justify-content-center flex">
                             <Col lg={6} xs={12} sm={12} md={6}>
@@ -147,7 +147,6 @@ export default class ContactForm extends React.Component {
                             
                         </Row>
                     </Form>
-                </Container>
             </React.Fragment>
         );
     }
