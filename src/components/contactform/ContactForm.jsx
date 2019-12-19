@@ -1,66 +1,155 @@
 ﻿import React from "react";
-import { Form, Button, Container, Row } from "react-bootstrap";
+import { Form, Button, Container, Row, Col, Spinner } from "react-bootstrap";
 import styles from "./styles/ContactForm.module.css";
-
-import axios from "axios";
+import { toast } from "react-toastify";
 
 export default class ContactForm extends React.Component {
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log(e.target[0].value);
-    let name = e.target[0].value;
-    let contactEmail = e.target[1].value;
-    let msg = e.target[2].value;
+    constructor(props) {
+        super(props);
+        this.state = {
+            contactName: "",
+            contactEmail: "",
+            contactSubject: "",
+            contactBody: "",
+            toastID: null,
+            loading: false,
 
-    axios.post(
-      "https://4it7527y55.execute-api.ap-southeast-2.amazonaws.com/staging-mydentureplace",
-      { event: `${name}, ${msg}, ${contactEmail}` }
-    );
-  };
-  render() {
-    return (
-      <React.Fragment>
-        <Container className={styles.contactFormContainer}>
-          <Row className="justify-content-center flex">
-            <Form style={{ width: "50%" }} onSubmit={this.handleSubmit}>
-              <Form.Group>
-                <Form.Label>Your Name</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Please enter your name"
-                />
-              </Form.Group>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Your Email address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Please enter your email"
-                />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
-              </Form.Group>
+        }
 
-              <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Message</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows="3"
-                  placeholder="Please enter your inquiry"
-                />
-              </Form.Group>
-              <Button
+        this.form = React.createRef();
+        this.submitButtonContainer = React.createRef();
+
+        this.validate = this.validate.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+    validate = () => {
+        return this.form.current.reportValidity();
+    }
+
+    handleChange = (e) => {
+        this.setState({ [e.target.id]: e.target.value });
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (this.validate()) {
+            fetch("https://4it7527y55.execute-api.ap-southeast-2.amazonaws.com/staging/contact", {
+                method: 'POST',
+                headers: {
+                    "Content-type": "application/x-www-form-urlencoded",
+                },
+                body: `{
+   					"contactName" : "${this.state.contactName}",
+   					"contactEmail" :"${this.state.contactEmail}",
+   					"contactSubject" : "${this.state.contactSubject}",
+   					"contactBody" : "${this.state.contactBody}"
+   					}`
+                })
+                .then(res => res.json())
+                .then(
+                    (result) => {
+                        this.setState({
+                            'toastID': toast.success(
+                                <span className={styles.whiteText}>Thank you for submitting your inquiry. We will get back to you soon!</span>,
+                                { autoClose: false })
+                        });
+                        this.setState({ loading: false });
+                    },
+                    (error) => {
+                        this.setState({
+                            'toastID': toast.error(
+                                <span className={styles.whiteText}>Something went wrong on our end,
+    						please try again later</span>,
+                                { autoClose: false })
+                        });
+                        this.setState({ loading: false });
+                    }
+                );
+
+        } else {
+            if (!toast.isActive(this.state.toastID))
+                this.setState({
+                    'toastID': toast.error(
+                        <span className={styles.whiteText}>It appears something is wrong with your information,
+						please check your details and ensure everything is filled out and correct.</span>,
+                        { autoClose: false })
+                });
+        }
+    };
+    render() {
+        const button =
+            <Button
                 variant="primary"
                 type="submit"
                 style={{ width: "100%", borderRadius: "20px" }}
-              >
+            >
                 <h5 className={styles.actionButtonText}>Submit</h5>
-              </Button>
-            </Form>
-          </Row>
-        </Container>
-      </React.Fragment>
-    );
-  }
+            </Button>;
+        const spinner = <Spinner animation="border" />;
+        return (
+            <React.Fragment>
+                <Container className={styles.contactFormContainer}>
+                    <Form ref={this.form} onSubmit={this.handleSubmit} style={{ marginLeft: "10%", marginRight: "10%" }}>
+                        <Row className="justify-content-center flex">
+                            <Col lg={6} xs={12} sm={12} md={6}>
+                                <Form.Group controlId="contactName">
+                                    <Form.Label>Your Name</Form.Label>
+                                    <Form.Control
+                                        placeholder="Please enter your name"
+                                        onChange={this.handleChange}
+                                        required
+                                    />
+                                </Form.Group>
+                            </Col>
+
+                            <Col lg={6} xs={12} sm={12} md={6}>
+                                <Form.Group controlId="contactEmail">
+                                    <Form.Label>Your Email address</Form.Label>
+                                    <Form.Control
+                                        type="email"
+                                        placeholder="Please enter your email"
+                                        onChange={this.handleChange}
+                                        required
+                                    />
+                                    <Form.Text className="text-muted">
+                                        We'll never share your email with anyone else.
+                                    </Form.Text>
+                                </Form.Group>
+                            </Col>
+
+                            <Col lg={12} xs={12} sm={12} md={12}>
+                                <Form.Group controlId="contactSubject">
+                                    <Form.Label>Subject</Form.Label>
+                                    <Form.Control
+                                        placeholder="How can we help you?"
+                                        onChange={this.handleChange}
+                                        required
+                                    />
+                                </Form.Group>
+                            </Col>
+
+                            <Col lg={12} xs={12} sm={12} md={12}>
+                                <Form.Group controlId="contactBody">
+                                    <Form.Label>Message</Form.Label>
+                                    <Form.Control
+                                        as="textarea"
+                                        rows="3"
+                                        placeholder="Please explain in detail here"
+                                        onChange={this.handleChange}
+                                        required
+                                    />
+                                </Form.Group>
+                            </Col>
+                            {this.state.loading ? spinner : button}
+                            
+                        </Row>
+                    </Form>
+                </Container>
+            </React.Fragment>
+        );
+    }
 }
 //export default Form.create()(ContactForm);
