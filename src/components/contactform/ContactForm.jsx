@@ -1,7 +1,10 @@
 ﻿import React from "react";
+
 import { Form, Button, Container, Row, Col, Spinner } from "react-bootstrap";
 import styles from "./styles/ContactForm.module.css";
-import { toast } from "react-toastify";
+
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class ContactForm extends React.Component {
     constructor(props) {
@@ -18,7 +21,6 @@ export default class ContactForm extends React.Component {
 
         this.form = React.createRef();
         this.submitButtonContainer = React.createRef();
-
         this.validate = this.validate.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -34,9 +36,11 @@ export default class ContactForm extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
         e.stopPropagation();
-
+        
         if (this.validate()) {
-            fetch("https://4it7527y55.execute-api.ap-southeast-2.amazonaws.com/staging/contact", {
+            this.setState({ loading: true });
+            toast.dismiss();
+            fetch("https://bp4pucafj0.execute-api.ap-southeast-2.amazonaws.com/v1/contact", {
                 method: 'POST',
                 headers: {
                     "Content-type": "application/x-www-form-urlencoded",
@@ -84,14 +88,14 @@ export default class ContactForm extends React.Component {
             <Button
                 variant="primary"
                 type="submit"
-                style={{ width: "100%", borderRadius: "20px" }}
-            >
+                style={{ width: "100%", borderRadius: "20px" }}>
                 <h5 className={styles.actionButtonText}>Submit</h5>
             </Button>;
+
         const spinner = <Spinner animation="border" />;
         return (
             <React.Fragment>
-                
+                    <ToastContainer />
                     <Form ref={this.form} onSubmit={this.handleSubmit} style={{ marginLeft: "10%", marginRight: "10%" }}>
                         <Row className="justify-content-center flex">
                             <Col lg={6} xs={12} sm={12} md={6}>
