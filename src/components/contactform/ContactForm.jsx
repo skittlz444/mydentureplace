@@ -37,7 +37,15 @@ export default class ContactForm extends React.Component {
         e.preventDefault();
         e.stopPropagation();
         
-        if (this.validate()) {
+        if (!this.validate()) {
+            if (!toast.isActive(this.state.toastID))
+                this.setState({
+                    'toastID': toast.error(
+                        <span className={styles.whiteText}>It appears something is wrong with your information,
+						please check your details and ensure everything is filled out and correct.</span>,
+                        { autoClose: false })
+                });
+        } else {
             this.setState({ loading: true });
             toast.dismiss();
             fetch("https://bp4pucafj0.execute-api.ap-southeast-2.amazonaws.com/v1/contact", {
@@ -51,13 +59,16 @@ export default class ContactForm extends React.Component {
    					"contactSubject" : "${this.state.contactSubject}",
    					"contactBody" : "${this.state.contactBody}"
    					}`
-                })
+            }
+            )
                 .then(res => res.json())
                 .then(
                     (result) => {
                         this.setState({
                             'toastID': toast.success(
-                                <span className={styles.whiteText}>Thank you for submitting your inquiry. We will get back to you soon!</span>,
+                                <span className={styles.whiteText}>Thank you for submitting a contact request!
+                                I'll be in touch within the next few days so keep an eye out in your emails,
+    						including your junk folder.</span>,
                                 { autoClose: false })
                         });
                         this.setState({ loading: false });
@@ -72,15 +83,6 @@ export default class ContactForm extends React.Component {
                         this.setState({ loading: false });
                     }
                 );
-
-        } else {
-            if (!toast.isActive(this.state.toastID))
-                this.setState({
-                    'toastID': toast.error(
-                        <span className={styles.whiteText}>It appears something is wrong with your information,
-						please check your details and ensure everything is filled out and correct.</span>,
-                        { autoClose: false })
-                });
         }
     };
     render() {
