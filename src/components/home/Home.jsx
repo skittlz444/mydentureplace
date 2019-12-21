@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {Row, Col, Container, Image, Jumbotron } from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
 
@@ -18,7 +18,7 @@ export default class Home extends React.Component{
 		alert("Coming soon");
 	}
 
-	render(){
+    render() {
 		return (
 			<React.Fragment>
 				<Jumbotron fluid className={styles.jumboContainer} id="home">
@@ -48,15 +48,16 @@ export default class Home extends React.Component{
 							{
 								(matches) =>{
 									if (matches){
-										return (
-											<Col sm={{span:12, order: 1}} xs={{span:12, order: 1}} md={{span:12, order: 1}} className={styles.homeCarousel}>
-												<HomeCarousel/>
-											</Col>)
+                                        return (
+                                            <Col sm={{ span: 12, order: 1 }} xs={{ span: 12, order: 1 }} md={{ span: 12, order: 1 }} className={styles.homeCarousel}>
+                                                <HomeCarousel />
+                                            </Col>
+                                                )
 									} else {
-										return (
-											<Col lg={{span:6, order:2}} >
-												<HomeCarousel/>
-											</Col>
+                                        return (
+                                            <Col lg={{ span: 6, order: 2 }} >
+                                                <HomeCarousel />
+                                            </Col>
 											)
 									}
 								}
@@ -67,8 +68,8 @@ export default class Home extends React.Component{
 				</Jumbotron>
 				<Container>
 					<Row>
-						<Col>
-							<Image src={leftImage} className={styles.leftImage} />
+                        <Col>
+                            <Image src={leftImage} className={styles.leftImage} PlaceholderContent={<p>Loading...</p>} />
 						</Col>
 						<Col>
 							<h4>
@@ -91,8 +92,8 @@ export default class Home extends React.Component{
 							</h4>
 						</Col>
 					</Row>
-				</Container>
-				<OurClinic/>
+                </Container>
+                <OurClinic />
 			</React.Fragment>
 		);
 	}
