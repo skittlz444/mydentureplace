@@ -1,6 +1,6 @@
-import React from "react";
-import { Row, Col, Container, Image, Jumbotron, Button } from "react-bootstrap";
-import MediaQuery from "react-responsive";
+import React from 'react';
+import {Row, Col, Container, Image, Jumbotron } from 'react-bootstrap';
+import MediaQuery from 'react-responsive';
 
 import HomeCarousel from './HomeCarousel';
 import leftImage from './img/Restoring-Your-Smile.jpg';
