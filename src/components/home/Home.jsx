@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import {Row, Col, Container, Image, Jumbotron } from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
 
