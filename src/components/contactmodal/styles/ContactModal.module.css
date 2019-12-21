@@ -3,7 +3,17 @@
     margin-right: 1rem;
     margin-left: 1rem;
 }
-.modal {
-    width: 90%;
-    max-width: 90% !important;
+
+@media (max-width: 1000px) {
+    .modal {
+        width: 90%;
+        max-width: 90% !important;
+    }
+}
+
+@media (min-width: 1001px) {
+    .modal {
+        width: 50%;
+        max-width: 50% !important;
+    }
 }
