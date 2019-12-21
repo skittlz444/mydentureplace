@@ -40,7 +40,7 @@ export default class ContactForm extends React.Component {
         if (this.validate()) {
             this.setState({ loading: true });
             toast.dismiss();
-            fetch("https://bp4pucafj0.execute-api.ap-southeast-2.amazonaws.com/v1", {
+            fetch("https://bp4pucafj0.execute-api.ap-southeast-2.amazonaws.com/v1/contact", {
                 method: 'POST',
                 headers: {
                     "Content-type": "application/x-www-form-urlencoded",
