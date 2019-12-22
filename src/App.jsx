@@ -4,12 +4,10 @@ import { Image } from 'react-bootstrap';
 import "~/shared.module.css";
 import WOW from "wowjs";
 
-//import Home from "@c/home/Home";
 import ContactHeader from "@s/contactheader/ContactHeader";
 import Footer from "@s/footer/Footer";
 import NavBar from "@s/navbar/NavBar";
 import loadingImage from '@s/notfound/img/loading.gif';
-//import NotFound from "@s/notfound/NotFound";
 
 require('animate.css');
 require('bootstrap');
@@ -20,8 +18,11 @@ export default class App extends React.Component {
     }
 
     render() {
-        const Home = React.lazy(() => import('./components/home/Home'));
-        const NotFound = React.lazy(() => import('./components/shared/notfound/NotFound'));
+        const homePromise = import('./components/home/Home');
+        const notFoundPromise = import('./components/shared/notfound/NotFound');
+
+        const Home = React.lazy(() => homePromise);
+        const NotFound = React.lazy(() => notFoundPromise);
 
         const LoadingMessage = () => (
             <div style={{ textAlign: "center" }}>
