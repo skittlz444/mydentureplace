@@ -1,6 +1,6 @@
 ﻿import React from "react";
 
-import { Form, Button, Container, Row, Col, Spinner } from "react-bootstrap";
+import { Form, Button, Row, Col, Spinner } from "react-bootstrap";
 import styles from "./styles/ContactForm.module.css";
 
 import { toast, ToastContainer } from "react-toastify";
