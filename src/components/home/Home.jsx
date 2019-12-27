@@ -9,10 +9,6 @@ import ContactModal from '@c/contactmodal/ContactModal';
 import styles from './styles/Home.module.css';
 
 export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
     render() {
 		return (
 			<React.Fragment>

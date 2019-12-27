@@ -13,7 +13,6 @@ export default class ContactModal extends React.Component {
     }
 
     setShow = (e) => {
-        console.log(e)
         this.setState({ show: e });
     }
 
