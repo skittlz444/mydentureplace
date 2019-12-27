@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { Image } from 'react-bootstrap';
 import "~/shared.module.css";
 import WOW from "wowjs";
 
@@ -8,31 +9,46 @@ import ContactPage from "@c/contactpage/ContactPage";
 import ContactHeader from "@s/contactheader/ContactHeader";
 import Footer from "@s/footer/Footer";
 import NavBar from "@s/navbar/NavBar";
-import NotFound from "@s/notfound/NotFound";
+import loadingImage from '@s/notfound/img/loading.gif';
 
 require("animate.css");
 require("bootstrap");
 
 export default class App extends React.Component {
-  componentDidMount() {
-    new WOW.WOW().init();
-  }
+    componentDidMount() {
+        new WOW.WOW().init();
+    }
 
-  render() {
-    return (
-        <React.Fragment>
-            <Router>
-                <ContactHeader />
-                <NavBar />
-                <Switch>
-                    <Redirect exact from="/" to="/home" />
-                    <Route exact path="/home" component={Home} />
-                    <Route path="/contact" component={ContactPage} />
-                    <Route component={NotFound} />
-                </Switch>
-                <Footer />
-            </Router>
-        </React.Fragment>
-    );
-  }
+    render() {
+        const homePromise = import('./components/home/Home');
+        const notFoundPromise = import('./components/shared/notfound/NotFound');
+
+        const Home = React.lazy(() => homePromise);
+        const NotFound = React.lazy(() => notFoundPromise);
+
+        const LoadingMessage = () => (
+            <div style={{ textAlign: "center" }}>
+                <Image src={loadingImage} />
+                <h1 style={{ display: "block", margin: "auto", paddingTop: "40px" }}>"Please wait while the page loads..."</h1>
+            </div>
+        )
+
+        return (
+            <React.Fragment>
+                <Router>
+                    <ContactHeader />
+                    <NavBar />
+                    <Suspense fallback={<LoadingMessage />}>
+                        <Switch>
+                            <Redirect exact from="/" to="/home" />
+                            <Route exact path="/home" component={Home} />
+                            <Route path="/contact" component={ContactPage} />
+                            <Route component={NotFound} />
+                        </Switch>
+                    </Suspense>
+                    <Footer />
+                </Router>
+            </React.Fragment>
+        );
+    }
 }
