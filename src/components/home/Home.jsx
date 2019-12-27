@@ -8,15 +8,10 @@ import OurClinic from '@c/ourclinic/OurClinic';
 import ContactModal from '@c/contactmodal/ContactModal';
 import styles from './styles/Home.module.css';
 
-export default class Home extends React.Component{
-	constructor(props){
-		super(props);
-		this.handleGetInTouchClick = this.handleGetInTouchClick.bind(this);
-	}
-
-	handleGetInTouchClick(e){
-		alert("Coming soon");
-	}
+export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
     render() {
 		return (

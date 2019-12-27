@@ -4,13 +4,15 @@ import { Image } from 'react-bootstrap';
 import "~/shared.module.css";
 import WOW from "wowjs";
 
+import Home from "@c/home/Home";
+import ContactPage from "@c/contactpage/ContactPage";
 import ContactHeader from "@s/contactheader/ContactHeader";
 import Footer from "@s/footer/Footer";
 import NavBar from "@s/navbar/NavBar";
 import loadingImage from '@s/notfound/img/loading.gif';
 
-require('animate.css');
-require('bootstrap');
+require("animate.css");
+require("bootstrap");
 
 export default class App extends React.Component {
     componentDidMount() {
@@ -40,6 +42,7 @@ export default class App extends React.Component {
                         <Switch>
                             <Redirect exact from="/" to="/home" />
                             <Route exact path="/home" component={Home} />
+                            <Route path="/contact" component={ContactPage} />
                             <Route component={NotFound} />
                         </Switch>
                     </Suspense>

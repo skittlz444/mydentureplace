@@ -1,0 +1,26 @@
+.informationText{
+	text-align: center;
+}
+
+.homeInfoCol{
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 600px){
+	.leftImage{
+		max-height: 30rem;
+		padding-bottom: 2rem;
+	}
+}
+@media (min-width: 601px){
+	.leftImage{
+		max-height: 30rem;
+	}
+}
+
+.actionButtonText{
+  margin-top: 0.6rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}

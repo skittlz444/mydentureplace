@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import ContactForm from '@c/contactform/ContactForm';
 import styles from './styles/ContactModal.module.css';
 
 export default class ContactModal extends React.Component {
@@ -32,15 +33,7 @@ export default class ContactModal extends React.Component {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p>
-                            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-                        commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-                        ipsam atque a dolores quisquam quisquam adipisci possimus
-                        laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-                        accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-                        reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-                        deleniti rem!
-                        </p>
+                        <ContactForm />
                     </Modal.Body>
                 </Modal>
                 <Button onClick={()=>this.setShow(true)} variant="light">
