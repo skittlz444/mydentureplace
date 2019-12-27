@@ -4,7 +4,6 @@ import { Image } from 'react-bootstrap';
 import "~/shared.module.css";
 import WOW from "wowjs";
 
-import Home from "@c/home/Home";
 import ContactPage from "@c/contactpage/ContactPage";
 import ContactHeader from "@s/contactheader/ContactHeader";
 import Footer from "@s/footer/Footer";
