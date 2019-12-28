@@ -29,3 +29,15 @@
     color: white;
     border-radius: 50%;
 }
+
+.contactText {
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+a:hover, a:active, a:focus {
+  color:#c33;
+}
