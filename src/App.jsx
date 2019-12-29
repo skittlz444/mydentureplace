@@ -4,7 +4,6 @@ import { Image } from 'react-bootstrap';
 import "~/shared.module.css";
 import WOW from "wowjs";
 
-import ContactPage from "@c/contactpage/ContactPage";
 import ContactHeader from "@s/contactheader/ContactHeader";
 import Footer from "@s/footer/Footer";
 import NavBar from "@s/navbar/NavBar";
@@ -21,9 +20,11 @@ export default class App extends React.Component {
     render() {
         const homePromise = import('./components/home/Home');
         const notFoundPromise = import('./components/shared/notfound/NotFound');
+        const contactPromise = import('./components/contactpage/ContactPage');
 
         const Home = React.lazy(() => homePromise);
         const NotFound = React.lazy(() => notFoundPromise);
+        const ContactPage = React.lazy(() => contactPromise);
 
         const LoadingMessage = () => (
             <div style={{ textAlign: "center" }}>
