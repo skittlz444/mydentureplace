@@ -31,13 +31,11 @@ export default class OurClinic extends React.Component{
 								<Image src={image1} className={styles.leftImage}/>
 							</Col>
 							<Col lg={5}>
-								<h4>Designed with your needs in mind.</h4>
-								<h4>Be comfortable.</h4>
-								<h4>Private lounge area.</h4>
-								<h4>No public waiting room.</h4>
-								<h4>We listen when you talk.</h4>
-								<h4>We have no front desk.</h4>
-								<h4>More personal reception.</h4>
+								<h4>All Health Funds Welcome.</h4>
+								<h4>DVA Provider.</h4>
+								<h4>Latest Technologies.</h4>
+								<h4>Relaxing environment.</h4>
+								<h4>Discreet and personal service.</h4>
 							</Col>
 							<Col lg={3} md={12}>
 								<Image src={image2} className={styles.rightImage}/>
