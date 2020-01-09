@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './styles/OurClinic.module.css';
-import {Row, Col, Container, Image, Button} from 'react-bootstrap';
+import {Row, Col, Container, Button} from 'react-bootstrap';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import image1 from './img/4.-My-Denture-Place-Waiting-Room-300x225.jpg'
 import image2 from './img/5.-Dentist-Chair-300x225.jpg'
+import altimage from '@s/loadingimage/loading-image.gif'
 
 export default class OurClinic extends React.Component{
 	constructor(props){
@@ -28,7 +31,11 @@ export default class OurClinic extends React.Component{
 						<hr/>
 						<Row>
 							<Col lg={4} md={12}>
-								<Image src={image1} className={styles.leftImage}/>
+							    <LazyLoadImage
+							    src={image1}
+							    alt={altimage}
+							    className={styles.leftImage}
+							     />
 							</Col>
 							<Col lg={5}>
 								<h4>Designed with your needs in mind.</h4>
@@ -40,7 +47,11 @@ export default class OurClinic extends React.Component{
 								<h4>More personal reception.</h4>
 							</Col>
 							<Col lg={3} md={12}>
-								<Image src={image2} className={styles.rightImage}/>
+							    <LazyLoadImage
+                                src={image2}
+                                alt={altimage}
+                                className={styles.rightImage}
+                                 />
 							</Col>
 						</Row>
 						<hr/>

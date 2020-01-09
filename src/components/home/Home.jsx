@@ -1,9 +1,12 @@
 import React from 'react';
-import {Row, Col, Container, Image, Jumbotron } from 'react-bootstrap';
+import {Row, Col, Container, Jumbotron } from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import HomeCarousel from './HomeCarousel';
 import leftImage from './img/Restoring-Your-Smile.jpg';
+import altimage from '@s/loadingimage/loading-image.gif'
 import OurClinic from '@c/ourclinic/OurClinic';
 import ContactModal from '@c/contactmodal/ContactModal';
 import styles from './styles/Home.module.css';
@@ -60,7 +63,11 @@ export default class Home extends React.Component {
 				<Container>
 					<Row>
                         <Col>
-                            <Image src={leftImage} className={styles.leftImage} PlaceholderContent={<p>Loading...</p>} />
+                            <LazyLoadImage
+                            src={leftImage}
+                            alt={altimage}
+                            className={styles.leftImage}
+                             />
 						</Col>
 						<Col>
 							<h4>

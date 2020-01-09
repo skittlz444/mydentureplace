@@ -1,6 +1,9 @@
 import React from 'react';
-import {Row, Col, Container, Image} from 'react-bootstrap';
+import {Row, Col, Container} from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import altimage from '@s/loadingimage/loading-image.gif'
 
 import styles from './styles/ContactHeader.module.css';
 import headerImage from './img/MDP New Logo.png';
@@ -14,7 +17,11 @@ export default class ContactHeader extends React.Component{
 							<Col>
 							</Col>
 							<Col>
-								<Image src={headerImage} className={styles.headerImage + " wow fadeInDown"}/>
+							    <LazyLoadImage
+                                src={headerImage}
+                                alt={altimage}
+                                className={styles.headerImage + " wow fadeInDown"}
+                                 />
 							</Col>
 							<Col md={{order:1}} className={styles.lgContactInfo + ' justify-content-end wow fadeInDown delay-1s flex'}>
 								<div>
