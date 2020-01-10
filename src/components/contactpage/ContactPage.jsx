@@ -16,23 +16,27 @@ export default class ContactPage extends React.Component {
 
                 <Container style={{width:"50%"}}>
                     <Row className="justify-content-center flex">
-                    <h5 style={{paddingBottom:"20px"}}>
+                    <h3 style={{paddingBottom:"20px"}}>
                         Alternatively, you can contact us through the contact details below:
-                    </h5>
-                        <Col lg={6} xs={12} sm={12} md={6}>
+                    </h3>
+                    </Row>
+                    <Row className="justify-content-center flex">
+                        <Col>
                             <a href={"mailto:info@mydentureplace.com.au"} className={styles.contactText}>
-                            <p>
+                            <h3 className={styles.contactTextSize}>
                             <Icon type="mail" />
                                   info@mydenctureplace.com.au
-                            </p>
+                            </h3>
                             </a>
                         </Col>
+                    </Row>
+                    <Row className="justify-content-center flex">
                         <Col lg={6} xs={12} sm={12} md={6}>
                             <a href="tel:0741240800" className={styles.contactText}>
-                            <p>
+                            <h3 className={styles.contactTextSize}>
                                 <Icon type="phone" />
                                     07 4124 0800
-                                </p>
+                            </h3>
                             </a>
                         </Col>
                     </Row>

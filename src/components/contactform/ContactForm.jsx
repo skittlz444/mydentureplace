@@ -102,7 +102,7 @@ export default class ContactForm extends React.Component {
                         <Row className="justify-content-center flex">
                             <Col lg={6} xs={12} sm={12} md={6}>
                                 <Form.Group controlId="contactName">
-                                    <Form.Label>Your Name</Form.Label>
+                                    <Form.Label><h3>Your Name</h3></Form.Label>
                                     <Form.Control
                                         placeholder="Please enter your name"
                                         onChange={this.handleChange}
@@ -113,7 +113,7 @@ export default class ContactForm extends React.Component {
 
                             <Col lg={6} xs={12} sm={12} md={6}>
                                 <Form.Group controlId="contactEmail">
-                                    <Form.Label>Your Email address</Form.Label>
+                                    <Form.Label><h3>Your Email address</h3></Form.Label>
                                     <Form.Control
                                         type="email"
                                         placeholder="Please enter your email"
@@ -128,7 +128,7 @@ export default class ContactForm extends React.Component {
 
                             <Col lg={12} xs={12} sm={12} md={12}>
                                 <Form.Group controlId="contactSubject">
-                                    <Form.Label>Subject</Form.Label>
+                                    <Form.Label><h3>Subject</h3></Form.Label>
                                     <Form.Control
                                         placeholder="How can we help you?"
                                         onChange={this.handleChange}
@@ -139,7 +139,7 @@ export default class ContactForm extends React.Component {
 
                             <Col lg={12} xs={12} sm={12} md={12}>
                                 <Form.Group controlId="contactBody">
-                                    <Form.Label>Message</Form.Label>
+                                    <Form.Label><h3>Message</h3></Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows="3"
