@@ -12,9 +12,10 @@
         font-size:1em;
     }
     h3 {
-        font-size: 1em
+        font-size: 1em;
     }
 }
+
 @media (min-width: 1001px){
     .contactFormContainer {
         width: 60%;
