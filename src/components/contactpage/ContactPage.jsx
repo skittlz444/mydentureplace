@@ -1,8 +1,8 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import ContactForm from "@c/contactform/ContactForm";
 import styles from "./styles/ContactPage.module.css";
-import { Icon, Button } from 'antd';
+import { Icon } from 'antd';
 
 import callButton from './styles/call-button.png';
 
@@ -35,7 +35,7 @@ export default class ContactPage extends React.Component {
                         <Col lg={6} xs={12} sm={12} md={6}>
                             <a href="tel:0741240800" className={styles.contactText}>
                             <h3 className={styles.contactTextSize}>
-                                <Button type="primary" icon="phone" shape="circle" /> 07 4124 0800
+                                <Button variant="success"><Icon type="phone"/> 07 4124 0800</Button>
                             </h3>
                             </a>
                         </Col>
