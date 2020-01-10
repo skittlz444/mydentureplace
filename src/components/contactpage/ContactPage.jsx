@@ -4,8 +4,6 @@ import ContactForm from "@c/contactform/ContactForm";
 import styles from "./styles/ContactPage.module.css";
 import { Icon } from 'antd';
 
-import callButton from './styles/call-button.png';
-
 export default class ContactPage extends React.Component {
 
   render() {
