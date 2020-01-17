@@ -5,7 +5,6 @@ import styles from "./styles/ContactPage.module.css";
 import { Icon } from 'antd';
 
 export default class ContactPage extends React.Component {
-
   render() {
     return (
         <React.Fragment>
@@ -13,7 +12,6 @@ export default class ContactPage extends React.Component {
                 <Container className={styles.contactFormContainer}>
                     <ContactForm />
                 </Container>
-
                 <Container style={{width:"50%"}}>
                     <Row className="justify-content-center flex">
                     <h3 style={{paddingBottom:"20px"}}>
