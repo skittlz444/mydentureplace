@@ -52,7 +52,7 @@ export default class ContactPage extends React.Component {
                                 <a href="tel:0741240800" className={styles.contactText}>
                                 <h3 className={styles.contactTextSize}>
                                 <div id="phone-button">
-                                    <Button variant="light"><Icon type="phone"/><h3> 07 4124 0800</h3></Button>
+                                    <Button variant="light" style={{width: "100%"}}><Icon type="phone"/><h3> 07 4124 0800</h3></Button>
                                 </div>
                                 <div className="phone-link" id="phone-link">
                                     <Icon type="phone"/> 07 4124 0800</div>
