@@ -4,9 +4,9 @@ import {Row, Col, Container, Button} from 'react-bootstrap';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import image1 from './img/4.-My-Denture-Place-Waiting-Room-300x225.jpg'
-import image2 from './img/5.-Dentist-Chair-300x225.jpg'
-import altimage from '@s/loadingimage/loading-image.gif'
+import image1 from './img/photo 2-1.JPG'
+import image2 from './img/photo 3.JPG'
+import altImage from '@s/loadingimage/loading-image.gif'
 
 export default class OurClinic extends React.Component{
 	constructor(props){
@@ -33,7 +33,7 @@ export default class OurClinic extends React.Component{
 							<Col lg={4} md={12}>
 							    <LazyLoadImage
 							    src={image1}
-							    alt={altimage}
+							    alt={altImage}
 							    className={styles.leftImage}
 							     />
 							</Col>
@@ -47,7 +47,7 @@ export default class OurClinic extends React.Component{
 							<Col lg={3} md={12}>
 							    <LazyLoadImage
                                 src={image2}
-                                alt={altimage}
+                                alt={altImage}
                                 className={styles.rightImage}
                                  />
 							</Col>
