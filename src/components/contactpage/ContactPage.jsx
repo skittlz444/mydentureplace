@@ -7,11 +7,9 @@ import { Icon } from 'antd';
 export default class ContactPage extends React.Component {
     updateDimensions = () => {
         if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-            console.log('mobile view');
             document.getElementById('phone-link').style.display = "none";
             document.getElementById('phone-button').style.display = "block";
         } else {
-            console.log("window view");
             document.getElementById('phone-link').style.display = "block";
             document.getElementById('phone-button').style.display = "none";
         }
