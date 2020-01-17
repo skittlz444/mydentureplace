@@ -32,7 +32,7 @@ export default class ContactModal extends React.Component {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <ContactForm />
+                        <ContactForm modal="true"/>
                     </Modal.Body>
                 </Modal>
                 <Button onClick={()=>this.setShow(true)} variant="light">
