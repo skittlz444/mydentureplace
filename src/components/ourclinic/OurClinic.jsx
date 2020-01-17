@@ -55,7 +55,7 @@ export default class OurClinic extends React.Component{
 						<hr/>
 						<Row>
 							<Col className="justify-content-center flex">
-								<Button onClick={this.handleFindUsClick}><h3 className={styles.actionButtonText}>Find Us</h3></Button>
+								<Button variant="info" onClick={this.handleFindUsClick}><h3 className={styles.actionButtonText}>Find Us</h3></Button>
 							</Col>
 						</Row>
 					</Container>
