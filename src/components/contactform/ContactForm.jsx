@@ -16,9 +16,8 @@ export default class ContactForm extends React.Component {
             contactBody: "",
             toastID: null,
             loading: false,
-
+            isModal: (this.props.modal !== undefined) ? this.props.modal : false
         }
-
         this.form = React.createRef();
         this.submitButtonContainer = React.createRef();
         this.validate = this.validate.bind(this);
@@ -86,13 +85,25 @@ export default class ContactForm extends React.Component {
         }
     };
     render() {
-        const button =
-            <Button
-                variant="primary"
-                type="submit"
-                style={{ width: "100%", borderRadius: "20px" }}>
-                <h5 className={styles.actionButtonText}>Submit</h5>
-            </Button>;
+    let button;
+        if (this.state.isModal) {
+            button =
+                <Button
+                    variant="info"
+                    type="submit"
+                    style={{ width: "100%", borderRadius: "20px" }}>
+                    <h5 className={styles.actionButtonText}>Submit</h5>
+                </Button>;
+        } else {
+            button =
+                <Button
+                    variant="light"
+                    type="submit"
+                    style={{ width: "100%", borderRadius: "20px" }}>
+                    <h5 className={styles.actionButtonText}>Submit</h5>
+                </Button>;
+        }
+
 
         const spinner = <Spinner animation="border" />;
         return (
