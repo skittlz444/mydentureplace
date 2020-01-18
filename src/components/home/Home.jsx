@@ -2,11 +2,7 @@ import React from 'react';
 import {Row, Col, Container, Jumbotron } from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
 import HomeCarousel from './HomeCarousel';
-import leftImage from './img/Restoring-Your-Smile.jpg';
-import altimage from '@s/loadingimage/loading-image.gif'
 import OurClinic from '@c/ourclinic/OurClinic';
 import ContactModal from '@c/contactmodal/ContactModal';
 import styles from './styles/Home.module.css';
@@ -60,37 +56,6 @@ export default class Home extends React.Component {
 						</Row>
 					</Container>
 				</Jumbotron>
-				<Container>
-					<Row>
-                        <Col>
-                            <LazyLoadImage
-                            src={leftImage}
-                            alt={altimage}
-                            className={styles.leftImage}
-                             />
-						</Col>
-						<Col>
-							<h4>
-								Before you get new dentures, you should have all the information required help you make the right decision.
-							</h4>
-							<h4>
-								Our aim is to help you to address your concerns and questions.
-							</h4>
-							<h4>
-								We prescribe and make your dentures directly to you.
-							</h4>
-							<h4>
-								Custom made right here, for your inh4idual smile.
-							</h4>
-							<h4>
-								Naturally shaped teeth from quality European manufacturers.
-							</h4>
-							<h4>
-								Our natural looking dentures consider you and your specific needs
-							</h4>
-						</Col>
-					</Row>
-                </Container>
                 <OurClinic />
 			</React.Fragment>
 		);
