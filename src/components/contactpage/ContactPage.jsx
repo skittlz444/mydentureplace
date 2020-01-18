@@ -6,20 +6,6 @@ import { Icon } from 'antd';
 import MediaQuery from 'react-responsive';
 
 export default class ContactPage extends React.Component {
-    updateDimensions = () => {
-        if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-            document.getElementById('phone-link').style.display = "none";
-            document.getElementById('phone-button').style.display = "block";
-        } else {
-            document.getElementById('phone-link').style.display = "block";
-            document.getElementById('phone-button').style.display = "none";
-        }
-    };
-    componentDidMount() {
-        //this.updateDimensions();
-        //window.addEventListener('resize', this.updateDimensions);
-    }
-
     render() {
         return (
             <React.Fragment>
