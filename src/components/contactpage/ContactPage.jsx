@@ -14,7 +14,7 @@ export default class ContactPage extends React.Component {
                         <ContactForm />
                     </Container>
 
-                    <Container style={{width:"50%"}}>
+                    <Container style={{width:"100%"}}>
                         <Row className="justify-content-center flex">
                         <h3 style={{paddingBottom:"20px"}}>
                             Alternatively, you can contact us through the contact details below:
