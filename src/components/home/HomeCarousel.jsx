@@ -2,9 +2,9 @@ import React from 'react';
 import {Image, Carousel} from 'react-bootstrap';
 
 import image1 from './img/high_res/Our-Building2-.png';
-import image2 from './img/high_res/photo 2.jpg';
-import image3 from './img/high_res/11.jpg';
-import image4 from './img/high_res/photo 12.jpg';
+import image2 from './img/high_res/photo 2.JPG';
+import image3 from './img/high_res/11.JPG';
+import image4 from './img/high_res/photo 12.JPG';
 
 export default class HomeCarousel extends React.Component{
 	render(){
