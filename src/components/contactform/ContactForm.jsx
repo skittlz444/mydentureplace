@@ -91,8 +91,9 @@ export default class ContactForm extends React.Component {
                 <Button
                     variant="info"
                     type="submit"
+                    size="lg"
                     style={{ width: "100%", borderRadius: "20px" }}>
-                    <h5 className={styles.actionButtonText}>Submit</h5>
+                    <h3 className={styles.actionButtonText}>Submit</h3>
                 </Button>;
         } else {
             button =
@@ -115,6 +116,7 @@ export default class ContactForm extends React.Component {
                                 <Form.Group controlId="contactName">
                                     <Form.Label><h3>Your Name</h3></Form.Label>
                                     <Form.Control
+                                        size="lg"
                                         placeholder="Please enter your name"
                                         onChange={this.handleChange}
                                         required
@@ -126,6 +128,7 @@ export default class ContactForm extends React.Component {
                                 <Form.Group controlId="contactEmail">
                                     <Form.Label><h3>Your Email address</h3></Form.Label>
                                     <Form.Control
+                                        size="lg"
                                         type="email"
                                         placeholder="Please enter your email"
                                         onChange={this.handleChange}
@@ -141,6 +144,7 @@ export default class ContactForm extends React.Component {
                                 <Form.Group controlId="contactSubject">
                                     <Form.Label><h3>Subject</h3></Form.Label>
                                     <Form.Control
+                                        size="lg"
                                         placeholder="How can we help you?"
                                         onChange={this.handleChange}
                                         required
@@ -152,6 +156,7 @@ export default class ContactForm extends React.Component {
                                 <Form.Group controlId="contactBody">
                                     <Form.Label><h3>Message</h3></Form.Label>
                                     <Form.Control
+                                        size="lg"
                                         as="textarea"
                                         rows="3"
                                         placeholder="Please explain in detail here"
