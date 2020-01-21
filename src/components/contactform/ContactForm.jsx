@@ -101,7 +101,7 @@ export default class ContactForm extends React.Component {
                     variant="light"
                     type="submit"
                     style={{ width: "100%", borderRadius: "20px" }}>
-                    <h5 className={styles.actionButtonText}>Submit</h5>
+                    <h3 className={styles.actionButtonText}>Submit</h3>
                 </Button>;
         }
 
