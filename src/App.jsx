@@ -21,10 +21,12 @@ export default class App extends React.Component {
         const homePromise = import('./components/home/Home');
         const notFoundPromise = import('./components/shared/notfound/NotFound');
         const contactPromise = import('./components/contactpage/ContactPage');
+        const aboutUsPromise = import('./components/aboutuspage/AboutUsPage');
 
         const Home = React.lazy(() => homePromise);
         const NotFound = React.lazy(() => notFoundPromise);
         const ContactPage = React.lazy(() => contactPromise);
+        const AboutUsPage = React.lazy(() => aboutUsPromise);
 
         const LoadingMessage = () => (
             <div style={{ textAlign: "center" }}>
@@ -43,6 +45,7 @@ export default class App extends React.Component {
                             <Redirect exact from="/" to="/home" />
                             <Route exact path="/home" component={Home} />
                             <Route path="/contact" component={ContactPage} />
+                            <Route path="/aboutus" component={AboutUsPage} />
                             <Route component={NotFound} />
                         </Switch>
                     </Suspense>
