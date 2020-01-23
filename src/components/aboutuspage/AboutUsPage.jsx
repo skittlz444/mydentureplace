@@ -18,8 +18,10 @@ export default class AboutUsPage extends React.Component {
                             <h3>
                                 About Us
                             </h3>
-                            <p>Michael commenced his dental career in 1986.</p>
-                            <p>
+                            <p className={styles.aboutUsText}>
+                            Michael commenced his dental career in 1986.
+                            </p>
+                            <p className={styles.aboutUsText}>
                             Michael’s original business had grown to the point that he had to move the practice to larger premises. The business was then re-named My Denture Place (mydentureplace) in January 2012.
                             </p>
                             </Col>
@@ -40,9 +42,12 @@ export default class AboutUsPage extends React.Component {
                             />
                             </Col>
                             <Col md={8}>
-                            <p>
+                            <p className={styles.aboutUsText}>
                             My Denture Place is the only denture business in the Wide Bay to use digital technology as an integral part of making dental products. My Denture Place was also Wide Bays first practice to introduce a Denture Injection Fabrication System. We are innovative in our decisions to be the best we can.
                             Michael feels that continuing education is very important, so he regularly attends various seminars and workshops to keep up to date with the latest technologies, materials and techniques.
+                            </p>
+                            <hr/>
+                            <p className={styles.aboutUsText}>
                             In 2008 Michael was awarded the Karl Ring Memorial Award for Academic Excellence from the Australian Dental Prosthetist Association.
                             Michael was the Australian Dental Prosthetist Association’s Member of the Month in October 2016.
                             </p>
