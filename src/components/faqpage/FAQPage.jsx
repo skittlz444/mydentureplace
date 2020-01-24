@@ -6,7 +6,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import img1 from './img/dreamstime_12622893.jpg';
 import img2 from './img/photo 6.JPG';
 import img3 from './img/photo 8.JPG';
-import img4 from './img/photo 9.JPG';
+//import img4 from './img/photo 9.JPG';
 import altimage from '@s/loadingimage/loading-image.gif'
 
 export default class FAQPage extends React.Component {
