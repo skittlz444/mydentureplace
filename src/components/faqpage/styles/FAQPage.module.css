@@ -1,0 +1,29 @@
+.FAQSection {
+    width:100%;
+    max-width: 100% !important;
+    background-color: #FBEEC1;
+    color: white;
+    padding-top: 0;
+}
+.FAQJumbotron {
+    width: 85%;
+    margin-left: 2%;
+    background-color: #FBEEC1;
+    color: black;
+}
+
+@media (max-width: 600px){
+	.imageFormat{
+		max-height: 14rem;
+		padding-bottom: 2rem;
+		margin-left: auto;
+        margin-right: auto;
+	}
+}
+@media (min-width: 601px){
+	.imageFormat{
+		max-height: 14rem;
+		width:100% !important;
+		align:right;
+	}
+}
