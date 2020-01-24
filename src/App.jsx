@@ -22,11 +22,13 @@ export default class App extends React.Component {
         const notFoundPromise = import('./components/shared/notfound/NotFound');
         const contactPromise = import('./components/contactpage/ContactPage');
         const aboutUsPromise = import('./components/aboutuspage/AboutUsPage');
+        const FAQPromise = import('./components/faqpage/FAQPage');
 
         const Home = React.lazy(() => homePromise);
         const NotFound = React.lazy(() => notFoundPromise);
         const ContactPage = React.lazy(() => contactPromise);
         const AboutUsPage = React.lazy(() => aboutUsPromise);
+        const FAQPage = React.lazy(() => FAQPromise);
 
         const LoadingMessage = () => (
             <div style={{ textAlign: "center" }}>
@@ -46,6 +48,7 @@ export default class App extends React.Component {
                             <Route exact path="/home" component={Home} />
                             <Route path="/contact" component={ContactPage} />
                             <Route path="/aboutus" component={AboutUsPage} />
+                            <Route path="/faq" component={FAQPage} />
                             <Route component={NotFound} />
                         </Switch>
                     </Suspense>
