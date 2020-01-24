@@ -114,7 +114,7 @@ export default class ContactForm extends React.Component {
                         <Row className="justify-content-center flex">
                             <Col lg={6} xs={12} sm={12} md={6}>
                                 <Form.Group controlId="contactName">
-                                    <Form.Label><h3>Your Name</h3></Form.Label>
+                                    <Form.Label><h3 className={styles.formLabel}>Your Name</h3></Form.Label>
                                     <Form.Control
                                         size="lg"
                                         placeholder="Please enter your name"
@@ -126,7 +126,7 @@ export default class ContactForm extends React.Component {
 
                             <Col lg={6} xs={12} sm={12} md={6}>
                                 <Form.Group controlId="contactEmail">
-                                    <Form.Label><h3>Your Email address</h3></Form.Label>
+                                    <Form.Label><h3 className={styles.formLabel}>Your Email address</h3></Form.Label>
                                     <Form.Control
                                         size="lg"
                                         type="email"
@@ -142,7 +142,7 @@ export default class ContactForm extends React.Component {
 
                             <Col lg={12} xs={12} sm={12} md={12}>
                                 <Form.Group controlId="contactSubject">
-                                    <Form.Label><h3>Subject</h3></Form.Label>
+                                    <Form.Label><h3 className={styles.formLabel}>Subject</h3></Form.Label>
                                     <Form.Control
                                         size="lg"
                                         placeholder="How can we help you?"
@@ -154,7 +154,7 @@ export default class ContactForm extends React.Component {
 
                             <Col lg={12} xs={12} sm={12} md={12}>
                                 <Form.Group controlId="contactBody">
-                                    <Form.Label><h3>Message</h3></Form.Label>
+                                    <Form.Label><h3 className={styles.formLabel}>Message</h3></Form.Label>
                                     <Form.Control
                                         size="lg"
                                         as="textarea"
