@@ -5,6 +5,7 @@ import {Row, Col, Container, Jumbotron } from 'react-bootstrap';
 // import HomeCarousel from './HomeCarousel';
 import OurClinic from '@c/ourclinic/OurClinic';
 import Services from '@c/services/Services';
+import DigitalDentistry from '@c/digitaldentistry/DigitalDentistry';
 import ContactModal from '@c/contactmodal/ContactModal';
 import styles from './styles/Home.module.css';
 
@@ -26,6 +27,7 @@ export default class Home extends React.Component {
 					</Container>
 				</Jumbotron>
                 <OurClinic />
+                <DigitalDentistry />
 			</React.Fragment>
 		);
 	}

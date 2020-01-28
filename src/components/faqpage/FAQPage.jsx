@@ -13,7 +13,7 @@ export default class FAQPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Container className={styles.FAQSection}>
+                <Container className={styles.FAQSection} id="faq">
                     <Jumbotron className={styles.FAQJumbotron}>
                         <Row className="justify-content-left flex">
                             <h3>
