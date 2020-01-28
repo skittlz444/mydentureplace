@@ -21,6 +21,7 @@
 	.leftImage{
 		max-height: 30rem;
 		padding-bottom: 2rem;
+		align-items:right;
 	}
 }
 @media (min-width: 601px){
