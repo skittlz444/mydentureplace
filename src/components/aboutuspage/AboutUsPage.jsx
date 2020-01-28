@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Jumbotron } from "react-bootstrap";
 import styles from "./styles/AboutUsPage.module.css";
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -13,7 +13,7 @@ export default class AboutUsPage extends React.Component {
         return (
             <React.Fragment>
                 <Container className={styles.aboutUsSection}>
-                    <Container style={{width:"85%"}}>
+                <Jumbotron className={styles.aboutUsJumbotron}>
                         <Row className="justify-content-left flex" style={{paddingBottom:"10px"}}>
                             <h3>
                                 About Us
@@ -51,7 +51,7 @@ export default class AboutUsPage extends React.Component {
                             </p>
                         </Col>
                         </Row>
-                    </Container>
+                    </Jumbotron>
                 </Container>
           </React.Fragment>
         );
