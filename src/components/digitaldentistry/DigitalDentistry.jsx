@@ -20,7 +20,7 @@ export default class DigitalDentistry extends React.Component{
 	render(){
 		return (
 			<React.Fragment>
-				<Container className={styles.digitalDentistryContainer} id="ourclinic">
+				<Container className={styles.digitalDentistryContainer} id="digitaldentistry">
 					<Container>
 						<Row className="justify-content-center flex">
 							<h2>
