@@ -4,9 +4,9 @@ import styles from './styles/FAQPage.module.css';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import thumbsup from './img/dreamstime_12622893.jpg';
-import img2 from './img/photo 6.JPG';
-import mydenture from './img/photo 8.JPG';
-import img4 from './img/photo 9.JPG';
+import img2 from './img/photo 6.jpg';
+import mydenture from './img/photo 8.jpg';
+import img4 from './img/photo 9.jpg';
 import altimage from '@s/loadingimage/loading-image.gif'
 
 export default class FAQPage extends React.Component {
