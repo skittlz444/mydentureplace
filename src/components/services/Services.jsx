@@ -28,7 +28,7 @@ export default class Services extends React.Component{
                 <Col md={4} style={{height: "600px !important"}}>
                 <FlipCard>
                 <Card style={{ width: '18rem', backgroundColor: "#659DBD" }}>
-                  <Card.Img variant="top" src={image1} />
+                  <Card.Img variant="top" src={image1} className={styles.flipCardImage}/>
                   <Card.Body>
                     <Card.Title>Digital</Card.Title>
                   </Card.Body>
@@ -59,7 +59,7 @@ export default class Services extends React.Component{
                 <Col md={4} style={{height: "600px !important"}}>
                 <FlipCard >
                 <Card style={{ width: '18rem', backgroundColor: "#659DBD" }}>
-                  <Card.Img variant="top" src={image2} />
+                  <Card.Img variant="top" src={image2} className={styles.flipCardImage} />
                   <Card.Body>
                     <Card.Title>Partial Dentures</Card.Title>
                   </Card.Body>
@@ -81,7 +81,7 @@ export default class Services extends React.Component{
                 <Col md={4} style={{height: "600px !important"}}>
                 <FlipCard>
                 <Card style={{ width: '18rem', backgroundColor: "#659DBD" }}>
-                  <Card.Img variant="top" src={image3} />
+                  <Card.Img variant="top" src={image3} className={styles.flipCardImage} />
                   <Card.Body>
                     <Card.Title>Denture Maintenance</Card.Title>
                   </Card.Body>

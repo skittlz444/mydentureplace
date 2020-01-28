@@ -1,3 +1,6 @@
 .servicesContainer {
     height: 600px;
 }
+.flipCardImage {
+    max-height: 200px;
+}
