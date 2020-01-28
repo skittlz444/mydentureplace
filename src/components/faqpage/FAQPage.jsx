@@ -4,9 +4,9 @@ import styles from './styles/FAQPage.module.css';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import thumbsup from './img/dreamstime_12622893.jpg';
-import img2 from './img/photo 6.JPG';
-import mydenture from './img/photo 8.JPG';
-import img4 from './img/photo 9.JPG';
+import img2 from './img/photo 6.jpg';
+import mydenture from './img/photo 8.jpg';
+import img4 from './img/photo 9.jpg';
 import altimage from '@s/loadingimage/loading-image.gif'
 
 export default class FAQPage extends React.Component {
@@ -63,7 +63,7 @@ export default class FAQPage extends React.Component {
                             </p>
                         </Col>
                         </Row>
-                        <Row className="justify-content-left flex">
+                        <Row className="justify-content-left flex" style={{paddingTop:"10px"}}>
                             <p className={styles.faqText}>
                             We do not provide a quote for partial dentures without first examining you as it depends on the number of components (wires, teeth etc.) that you will require.
                             </p>
@@ -112,7 +112,7 @@ export default class FAQPage extends React.Component {
                         </Row>
                         <hr/>
                         <Row className="justify-content-left flex">
-                            <Col md={8} style={{paddingLeft: "0"}}>
+                            <Col md={9} style={{paddingLeft: "0"}}>
                             <h4><b>Do I need to see a Dentist first?</b></h4>
                             <p className={styles.faqText}>
                             Just like a good building, dentures need to be made on solid foundations. If you have any concerns about your natural teeth or mouth you should address and complete these with your own dentist before we start treatment.
@@ -124,7 +124,7 @@ export default class FAQPage extends React.Component {
                             You do not need a referral to see us. That’s right, it is not necessary to obtain a referral from a dentist or GP to get dentures made or to see us here at mydentureplace. You can see us directly.
                             </p>
                             </Col>
-                            <Col md={4}>
+                            <Col md={3}>
                             <LazyLoadImage
                                 src={img4}
                                 alt={altimage}
