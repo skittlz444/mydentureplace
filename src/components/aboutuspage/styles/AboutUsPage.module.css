@@ -23,3 +23,10 @@
 .aboutUsText {
     font-size:1.3em;
 }
+
+.aboutUsJumbotron {
+    margin-left: 2%;
+    background-color: #659DBD;
+    color: white;
+    padding-top: 20px;
+}
