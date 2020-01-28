@@ -8,6 +8,7 @@ import HomeCarousel from './HomeCarousel';
 import leftImage from './img/Restoring-Your-Smile.jpg';
 import altimage from '@s/loadingimage/loading-image.gif'
 import OurClinic from '@c/ourclinic/OurClinic';
+import DigitalDentistry from '@c/digitaldentistry/DigitalDentistry';
 import ContactModal from '@c/contactmodal/ContactModal';
 import styles from './styles/Home.module.css';
 
@@ -92,6 +93,7 @@ export default class Home extends React.Component {
 					</Row>
                 </Container>
                 <OurClinic />
+                <DigitalDentistry />
 			</React.Fragment>
 		);
 	}
