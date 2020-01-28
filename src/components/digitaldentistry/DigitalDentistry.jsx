@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles/DigitalDentistry.module.css';
-import {Row, Col, Container, Button} from 'react-bootstrap';
+import {Row, Container} from 'react-bootstrap';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
