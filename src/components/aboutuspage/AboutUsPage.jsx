@@ -12,7 +12,7 @@ export default class AboutUsPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Container className={styles.aboutUsSection}>
+                <Container className={styles.aboutUsSection} id="aboutus">
                 <Jumbotron className={styles.aboutUsJumbotron}>
                         <Row className="justify-content-left flex" style={{paddingBottom:"10px"}}>
                             <h3>
