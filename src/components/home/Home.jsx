@@ -20,7 +20,7 @@ export default class Home extends React.Component {
 							</Col>
 						</Row>
 						<hr/>
-                        <Services />
+						<Services />
                         <hr />
                         <ContactModal />
 					</Container>
