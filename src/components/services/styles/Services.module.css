@@ -1,0 +1,10 @@
+.servicesImage {
+    max-height: 200px;
+}
+.servicesText {
+    color: black;
+    font-size:1.3rem
+}
+.servicesAccordion {
+    width: 100%;
+}
