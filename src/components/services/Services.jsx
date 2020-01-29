@@ -30,7 +30,7 @@ export default class Services extends React.Component{
         left: 0,
         behavior: "smooth"
       });
-    }, 300);
+    }, 500);
   }
 	render(){
 		return (
