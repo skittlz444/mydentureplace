@@ -15,31 +15,25 @@ export default class Services extends React.Component{
 			<React.Fragment>
 				<Container  id="services">
                 <Accordion className={styles.servicesAccordion}>
-                  <Card>
+                  <Card className={styles.servicesAccordionCard}>
                     <Card.Header>
                       <Accordion.Toggle as={Button} variant="transparent" eventKey="0" style={{width:"100%"}}>
                       <h2>
                         Digital
                       </h2>
+                      <LazyLoadImage
+                      src={image1}
+                      alt={altImage}
+                      className={styles.servicesImage}
+                     />
                       </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
                       <Card.Body className={styles.servicesText}>
-                      <Row>
-                      <Col lg={4} md={12}>
-                      <LazyLoadImage
-                        src={image1}
-                        alt={altImage}
-                        className={styles.servicesImage}
-                       />
-                       </Col>
-                       <Col lg={8}>
                       <h4>Precise</h4>
                       Digitally designed dentures offer an unparalleled accuracy in denture production and are more predictable than traditional dentures as there is less room for human error in the process.
                       <br />
                       This field in dentistry is just getting started, and My Denture Place Hervey Bay is thrilled to share the benefits of digitally designed dentures with you.
-                      </Col>
-                      </Row>
                       <h4>Faster</h4>
                       <p>
                       By bypassing the traditional wax and teeth setup, we can create digital dentures faster than ever before. We can also easily make any adjustments on our CAD software before your final denture is milled using the latest CAD/CAM technology.
@@ -53,54 +47,44 @@ export default class Services extends React.Component{
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>
-                  <Card>
+                  <Card className={styles.servicesAccordionCard}>
                     <Card.Header>
                       <Accordion.Toggle as={Button} variant="transparent" eventKey="1" style={{width:"100%"}}>
                         <h2>
                         Partial Dentures
                         </h2>
-                      </Accordion.Toggle>
-                    </Card.Header>
-                    <Accordion.Collapse eventKey="1">
-                      <Card.Body className={styles.servicesText}>
-                      <Row>
-                        <Col lg={4} md={12}>
                         <LazyLoadImage
                           src={image2}
                           alt={altImage}
                           className={styles.servicesImage}
                          />
-                         </Col>
-                         <Col lg={8}>
+                      </Accordion.Toggle>
+                    </Card.Header>
+                    <Accordion.Collapse eventKey="1">
+                      <Card.Body className={styles.servicesText}>
                         Generally required by people who still have some of their natural teeth and only need to replace a few that are missing.
                         <br />
                         These can be made from acrylic, metal, or flexible material. Metal and flexible materials in some cases can also be combined together for a strong invisible denture.
                         <br />
                         Our metal framed partial dentures are designed digitally. Our plastic and flexible partial dentures have their designs done digitally but are hand finished. The introduction of the CAD design at the formative stage leads to an accuracy never before seen in traditional processes.
-                        </Col>
-                      </Row>
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>
-                  <Card>
+                  <Card className={styles.servicesAccordionCard}>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="transparent" eventKey="2" style={{width:"100%"}}>
                           <h2>
                           Denture Maintenance
                           </h2>
+                          <LazyLoadImage
+                            src={image3}
+                            alt={altImage}
+                            className={styles.servicesImage}
+                           />
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="2">
                         <Card.Body className={styles.servicesText}>
-                            <Row>
-                            <Col lg={4} md={12}>
-                            <LazyLoadImage
-                              src={image3}
-                              alt={altImage}
-                              className={styles.servicesImage}
-                             />
-                             </Col>
-                             <Col lg={8}>
                             Sometimes dentures need repairing, adding to or cleaning.
                             <br />
                             If your dentures are loose, they may require a reline. This is normally the result of weight loss, ageing, loss of teeth, wear and tear etc.
@@ -108,8 +92,6 @@ export default class Services extends React.Component{
                             Dentures need to be treated the same as your natural teeth and have regular cleaning. It is recommended that you clean your dentures after meals to prevent inflamed gums, bacterial and fungal infections.
                             <br />
                             It is also important that your dentures be professionally cleaned by your Prosthetist once a year by ultrasonic cleaning equipment to remove excess tartar build up and to re-polish dentures with specialised equipment.
-                            </Col>
-                            </Row>
                         </Card.Body>
                       </Accordion.Collapse>
                     </Card>

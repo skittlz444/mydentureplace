@@ -2,9 +2,12 @@
     max-height: 200px;
 }
 .servicesText {
-    color: black;
     font-size:1.3rem
 }
 .servicesAccordion {
     width: 100%;
+}
+.servicesAccordionCard {
+    background-color: #d6c59c;
+    color: black;
 }
