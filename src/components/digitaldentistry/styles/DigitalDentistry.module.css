@@ -8,6 +8,13 @@
     font-size:1.3em;
 }
 
-.digitalImageFormat {
-    max-height: 15rem;
+@media (max-width: 600px){
+	.digitalImageFormat {
+        max-height: 5rem;
+    }
+}
+@media (min-width: 601px){
+	.digitalImageFormat {
+        max-height: 15rem;
+    }
 }
