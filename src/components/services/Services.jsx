@@ -18,19 +18,17 @@ export default class Services extends React.Component{
   scroll(el_id) {
     //console.log(el_id);
     var offset = document.getElementById("navbar").offsetHeight;
-    var target = document.getElementById(el_id);
-    var bodyRect = document.body.getBoundingClientRect().top;
-    console.log(target)
-    target = target.getBoundingClientRect().top;
-    console.log(target)
     offset = offset > 150 ? 56 : offset;
     setTimeout(() => {
+      var target = document.getElementById(el_id);
+      var bodyRect = document.body.getBoundingClientRect().top;
+      target = target.getBoundingClientRect().top;
       window.scrollTo({
         top: target - bodyRect - offset,
         left: 0,
         behavior: "smooth"
       });
-    }, 300);
+    }, 500);
   }
 	render(){
 		return (
