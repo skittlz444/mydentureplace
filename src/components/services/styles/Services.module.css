@@ -8,6 +8,11 @@
     width: 100%;
 }
 .servicesAccordionCard {
-    background-color: #d6c59c;
+    background-color: #fbeec1;
     color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.servicesAccordionCard:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 33, 0, 0.2)
 }
