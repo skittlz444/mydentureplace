@@ -37,6 +37,11 @@ export default class Footer extends React.Component{
 							</Container>
 						</Col>	
 					</Row>
+					<Row className="justify-content-center flex">
+					<small>
+					Copyright © 2020 Hayden Lindsay Carson & Kevin Kam
+					</small>
+					</Row>
 				</Container>
 			</React.Fragment>
 		);
