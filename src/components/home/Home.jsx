@@ -26,8 +26,8 @@ export default class Home extends React.Component {
                         <ContactModal />
 					</Container>
 				</Jumbotron>
+				<DigitalDentistry />
                 <OurClinic />
-                <DigitalDentistry />
 			</React.Fragment>
 		);
 	}

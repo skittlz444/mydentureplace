@@ -8,15 +8,6 @@ import image1 from './img/MDP Digital Process.jpg'
 import altImage from '@s/loadingimage/loading-image.gif'
 
 export default class DigitalDentistry extends React.Component{
-	constructor(props){
-		super(props);
-		this.handleFindUsClick = this.handleFindUsClick.bind(this);
-	}
-
-	handleFindUsClick(){
-		alert("Coming soon");
-	}
-
 	render(){
 		return (
 			<React.Fragment>
@@ -28,7 +19,7 @@ export default class DigitalDentistry extends React.Component{
 							</h2>
 						</Row>
 						<hr/>
-						<Row className="justify-content-center flex">
+						<Row className="justify-content-center flex" style={{paddingBottom:"10px"}}>
                             <LazyLoadImage
                             src={image1}
                             alt={altImage}
