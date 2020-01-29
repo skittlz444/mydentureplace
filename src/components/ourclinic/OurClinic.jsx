@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles/OurClinic.module.css';
-import {Row, Col, Container, Button} from 'react-bootstrap';
+import {Row, Col, Container, Button, Nav} from 'react-bootstrap';
+import { HashLink as Link } from "react-router-hash-link";
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -55,7 +56,15 @@ export default class OurClinic extends React.Component{
 						<hr/>
 						<Row>
 							<Col className="justify-content-center flex">
-								<Button variant="info" onClick={this.handleFindUsClick}><h3 className={styles.actionButtonText}>Find Us</h3></Button>
+							    <Nav.Link as="span" eventKey>
+                                    <Link
+                                      className={" nav-link"}
+                                      to={"/findus"}
+                                      scroll={el => this.scroll(el)}
+                                    >
+                                      <Button variant="info" onClick={this.handleFindUsClick}><h3 className={styles.actionButtonText}>Find Us</h3></Button>
+                                    </Link>
+                                  </Nav.Link>
 							</Col>
 						</Row>
 					</Container>
