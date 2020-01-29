@@ -11,6 +11,7 @@ export default class NavBar extends React.Component {
   }
 
   scroll(el) {
+    console.log(el);
     var offset = document.getElementById("navbar").offsetHeight;
     offset = offset > 150 ? 56 : offset;
     setTimeout(() => {
