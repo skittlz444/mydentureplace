@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import styles from './styles/FAQPage.module.css';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
