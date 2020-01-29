@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles/Services.module.css';
-import {Row, Col, Container, Card, Accordion, Button } from 'react-bootstrap';
+import { Container, Card, Accordion, Button } from 'react-bootstrap';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
