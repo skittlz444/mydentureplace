@@ -5,6 +5,8 @@ import styles from './styles/FindUsPage.module.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import altimage from '@s/loadingimage/loading-image.gif';
 
+import MapView from 'react-native-maps';
+
 export default class FindUsPage extends React.Component {
     render() {
         return (
@@ -17,6 +19,14 @@ export default class FindUsPage extends React.Component {
                             </h3>
                         </Row>
                         <hr />
+                        <MapView
+                            initialRegion={{
+                              latitude: 37.78825,
+                              longitude: -122.4324,
+                              latitudeDelta: 0.0922,
+                              longitudeDelta: 0.0421,
+                            }}
+                          />
                     </Container>
                 </Container>
             </React.Fragment>
