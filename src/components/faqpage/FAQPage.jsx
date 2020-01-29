@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import styles from './styles/FAQPage.module.css';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -14,7 +14,7 @@ export default class FAQPage extends React.Component {
         return (
             <React.Fragment>
                 <Container className={styles.FAQSection} id="faq">
-                    <Jumbotron className={styles.FAQJumbotron}>
+                    <Container className={styles.FAQJumbotron}>
                         <Row className="justify-content-left flex">
                             <h3>
                                 FAQ's
@@ -132,7 +132,7 @@ export default class FAQPage extends React.Component {
                             />
                             </Col>
                         </Row>
-                    </Jumbotron>
+                    </Container>
                 </Container>
             </React.Fragment>
         )
