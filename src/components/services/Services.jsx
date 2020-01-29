@@ -16,14 +16,17 @@ export default class Services extends React.Component{
   }
 
   scroll(el_id) {
-    console.log(el_id);
+    //console.log(el_id);
     var offset = document.getElementById("navbar").offsetHeight;
     var target = document.getElementById(el_id);
-    console.log(target);
+    var bodyRect = document.body.getBoundingClientRect().top;
+    console.log(target)
+    target = target.getBoundingClientRect().top;
+    console.log(target)
     offset = offset > 150 ? 56 : offset;
     setTimeout(() => {
       window.scrollTo({
-        top: target - offset,
+        top: target - bodyRect - offset,
         left: 0,
         behavior: "smooth"
       });
@@ -34,8 +37,8 @@ export default class Services extends React.Component{
 			<React.Fragment>
 				<Container  id="services">
                 <Accordion className={styles.servicesAccordion}>
-                  <Card className={styles.servicesAccordionCard}>
-                    <Card.Header>
+                  <Card className={styles.servicesAccordionCard} onClick={el => this.scroll("digital")}>
+                    <Card.Header id="digital">
                       <Accordion.Toggle as={Button} variant="transparent" eventKey="0" style={{width:"100%"}}>
                       <h2>
                         Digital
@@ -71,14 +74,13 @@ export default class Services extends React.Component{
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>
-                  <Card className={styles.servicesAccordionCard}>
+                  <Card className={styles.servicesAccordionCard} onClick={el => this.scroll("partialdentures")}>
                     <Card.Header id="partialdentures">
                       <Accordion.Toggle
                       as={Button}
                       variant="transparent"
                       eventKey="1"
-                      style={{width:"100%"}}
-                      onClick={console.log("clicked")}>
+                      style={{width:"100%"}}>
                         <h2>
                         Partial Dentures
                         </h2>
@@ -103,8 +105,8 @@ export default class Services extends React.Component{
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>
-                  <Card className={styles.servicesAccordionCard}>
-                      <Card.Header>
+                  <Card className={styles.servicesAccordionCard} onClick={el => this.scroll("denturemaintenance")}>
+                      <Card.Header id="denturemaintenance">
                         <Accordion.Toggle as={Button} variant="transparent" eventKey="2" style={{width:"100%"}}>
                           <h2>
                           Denture Maintenance
