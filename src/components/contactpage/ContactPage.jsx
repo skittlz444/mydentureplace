@@ -9,7 +9,7 @@ export default class ContactPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Container className={styles.contactSection}>
+                <Container className={styles.contactSection} id="contact">
                     <Container className={styles.contactFormContainer}>
                         <ContactForm />
                     </Container>
