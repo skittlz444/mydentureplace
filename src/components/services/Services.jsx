@@ -7,7 +7,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import image1 from './img/computer-screen.jpg'
 import image2 from './img/valplast.jpg'
 import image3 from './img/Maintenance.jpg'
-import altImage from '@s/loadingimage/loading-image.gif'
+import altImage from '@s/loadingimage/skeleton-image.png'
 
 export default class Services extends React.Component{
   constructor(props) {
@@ -42,8 +42,9 @@ export default class Services extends React.Component{
                         Digital Dentures
                       </h2>
                       <LazyLoadImage
-                      src={image1}
                       alt={altImage}
+                      src={image1}
+                      effect="blur"
                       className={styles.servicesImage}
                      />
                       </Accordion.Toggle>
@@ -85,6 +86,7 @@ export default class Services extends React.Component{
                         <LazyLoadImage
                           src={image2}
                           alt={altImage}
+                          effect="blur"
                           className={styles.servicesImage}
                          />
                       </Accordion.Toggle>
@@ -112,6 +114,7 @@ export default class Services extends React.Component{
                           <LazyLoadImage
                             src={image3}
                             alt={altImage}
+                            effect="blur"
                             className={styles.servicesImage}
                            />
                         </Accordion.Toggle>

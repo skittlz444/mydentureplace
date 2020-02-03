@@ -25,6 +25,7 @@ export default class AboutUsPage extends React.Component {
                             <LazyLoadImage
                                 src={portraitImage}
                                 alt={altimage}
+                                effect="blur"
                                 className={styles.leftImage}
                             />
                             </Col>

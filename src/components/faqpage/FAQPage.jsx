@@ -35,6 +35,7 @@ export default class FAQPage extends React.Component {
                             <LazyLoadImage
                                 src={mydenture}
                                 alt={altimage}
+                                effect="blur"
                                 className={styles.imageFormat}
                             />
                         </Col>
@@ -51,6 +52,7 @@ export default class FAQPage extends React.Component {
                             <LazyLoadImage
                                 src={img2}
                                 alt={altimage}
+                                effect="blur"
                                 className={styles.imageFormat}
                             />
                         </Col>
@@ -94,6 +96,7 @@ export default class FAQPage extends React.Component {
                         <LazyLoadImage
                             src={thumbsup}
                             alt={altimage}
+                            effect="blur"
                             className={styles.imageFormat}
                         />
                         </Col>
@@ -128,6 +131,7 @@ export default class FAQPage extends React.Component {
                             <LazyLoadImage
                                 src={img4}
                                 alt={altimage}
+                                effect="blur"
                                 className={styles.imageFormat}
                             />
                             </Col>

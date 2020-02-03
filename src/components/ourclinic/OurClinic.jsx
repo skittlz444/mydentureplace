@@ -34,6 +34,7 @@ export default class OurClinic extends React.Component{
 							    <LazyLoadImage
 							    src={image1}
 							    alt={altImage}
+							    effect="blur"
 							    className={styles.leftImage}
 							     />
 							</Col>
@@ -48,6 +49,7 @@ export default class OurClinic extends React.Component{
 							    <LazyLoadImage
                                 src={image2}
                                 alt={altImage}
+                                effect="blur"
                                 className={styles.rightImage}
                                  />
 							</Col>

@@ -23,6 +23,7 @@ export default class DigitalDentistry extends React.Component{
                             <LazyLoadImage
                             src={image1}
                             alt={altImage}
+                            effect="blur"
                             className={styles.digitalImageFormat}
                              />
                         </Row>
