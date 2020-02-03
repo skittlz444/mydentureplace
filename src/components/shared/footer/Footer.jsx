@@ -44,7 +44,7 @@ export default class Footer extends React.Component{
 					</Row>
 					<Row className="justify-content-center flex">
 					<small>
-                    Web Design by <a href="haydencarson.com" style={{color: "#212529"}}>Hayden Carson</a> & Kevin Kam
+                    Web Design by <a href="http://www.haydencarson.com" style={{color: "#212529"}}>Hayden Carson</a> & Kevin Kam
                     </small>
                     </Row>
 				</Container>
