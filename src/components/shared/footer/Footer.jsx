@@ -39,7 +39,7 @@ export default class Footer extends React.Component{
 					</Row>
 					<Row className="justify-content-center flex">
 					<small>
-					Copyright © 2020 Hayden Lindsay Carson & Kevin Kam
+					Copyright © 2020 <a href="haydencarson.com" style={{color: "#212529"}}>Hayden Carson</a> & Kevin Kam
 					</small>
 					</Row>
 				</Container>
