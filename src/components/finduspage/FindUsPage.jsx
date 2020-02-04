@@ -11,6 +11,8 @@ const MARKER_SIZE = 20;
 const dotenv = require('dotenv');
 const env = dotenv.config().parsed;
 
+console.log(process.env.MAPS_TOKEN)
+
 export default class FindUsPage extends React.Component {
     constructor(props){
         super(props);
