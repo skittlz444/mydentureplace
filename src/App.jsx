@@ -23,12 +23,14 @@ export default class App extends React.Component {
         const contactPromise = import('./components/contactpage/ContactPage');
         const aboutUsPromise = import('./components/aboutuspage/AboutUsPage');
         const FAQPromise = import('./components/faqpage/FAQPage');
+        const FindUsPromise = import('./components/finduspage/FindUsPage');
 
         const Home = React.lazy(() => homePromise);
         const NotFound = React.lazy(() => notFoundPromise);
         const ContactPage = React.lazy(() => contactPromise);
         const AboutUsPage = React.lazy(() => aboutUsPromise);
         const FAQPage = React.lazy(() => FAQPromise);
+        const FindUsPage = React.lazy(() => FindUsPromise);
 
         const LoadingMessage = () => (
             <div style={{ textAlign: "center" }}>
@@ -49,6 +51,7 @@ export default class App extends React.Component {
                             <Route path="/contact" component={ContactPage} />
                             <Route path="/aboutus" component={AboutUsPage} />
                             <Route path="/faq" component={FAQPage} />
+                            <Route path="/findus" component={FindUsPage} />
                             <Route component={NotFound} />
                         </Switch>
                     </Suspense>
