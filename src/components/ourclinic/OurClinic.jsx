@@ -10,15 +10,6 @@ import image2 from './img/photo 3.JPG'
 import altImage from '@s/loadingimage/loading-image.gif'
 
 export default class OurClinic extends React.Component{
-	constructor(props){
-		super(props);
-		this.handleFindUsClick = this.handleFindUsClick.bind(this);
-	}
-
-	handleFindUsClick(){
-		alert("Coming soon");
-	}
-
 	render(){
 		return (
 			<React.Fragment>
@@ -59,10 +50,10 @@ export default class OurClinic extends React.Component{
 							    <Nav.Link as="span" eventKey>
                                     <Link
                                       className={" nav-link"}
-                                      to={"/findus"}
+                                      to={"/findus#findus"}
                                       scroll={el => this.scroll(el)}
                                     >
-                                      <Button variant="info" onClick={this.handleFindUsClick}><h3 className={styles.actionButtonText}>Find Us</h3></Button>
+                                      <Button variant="info"><h3 className={styles.actionButtonText}>Find Us</h3></Button>
                                     </Link>
                                   </Nav.Link>
 							</Col>
