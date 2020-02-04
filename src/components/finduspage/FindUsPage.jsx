@@ -78,7 +78,7 @@ export default class FindUsPage extends React.Component {
                           longitude={152.834024}
                           zoom={15}
                           mapStyle={'mapbox://styles/kevinkam123/ck66b3tat3cgd1jlo17eeqkr8'}
-                          mapboxApiAccessToken={process.env.MAPS_TOKEN}
+                          mapboxApiAccessToken={process.env.REACT_APP_MAPS_TOKEN}
                         >
                         <Marker key={1} latitude={-25.284515} longitude={152.834024}>
                             <svg
