@@ -1,15 +1,29 @@
 import React from 'react';
-import {Row, Col, Container, Button} from 'react-bootstrap';
+import {Row, Col, Container, Button, Nav} from 'react-bootstrap';
+import { HashLink as Link } from "react-router-hash-link";
 
 export default class Footer extends React.Component{
 	constructor(props){
 		super(props);
 		this.handlePrivacy = this.handlePrivacy.bind(this);
+		this.scroll = this.scroll.bind(this);
 	}
 
 	handlePrivacy(){
 		alert("Coming Soon");
 	}
+	scroll(el) {
+        console.log(el);
+        var offset = document.getElementById("navbar").offsetHeight;
+        offset = offset > 150 ? 56 : offset;
+        setTimeout(() => {
+          window.scrollTo({
+            top: el.offsetTop - offset,
+            left: 0,
+            behavior: "smooth"
+          });
+        }, 300);
+      }
 
 	render(){
 		return (
@@ -25,7 +39,12 @@ export default class Footer extends React.Component{
 								</Container>
 								<Row>
 									<Col>
-										<Button variant="light" onClick={this.handlePrivacy}>Privacy Policy</Button>
+                                        <Link
+                                          to={"/privacypolicy#privacypolicy"}
+                                          scroll={el => this.scroll(el)}
+                                        >
+                                        <Button variant="light">Privacy Policy</Button>
+                                        </Link>
 									</Col>
 									<Col>
 										<Button variant="light" onClick={this.handlePrivacy}>Terms of Use</Button>
