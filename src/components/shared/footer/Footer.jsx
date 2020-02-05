@@ -5,13 +5,9 @@ import { HashLink as Link } from "react-router-hash-link";
 export default class Footer extends React.Component{
 	constructor(props){
 		super(props);
-		this.handlePrivacy = this.handlePrivacy.bind(this);
 		this.scroll = this.scroll.bind(this);
 	}
 
-	handlePrivacy(){
-		alert("Coming Soon");
-	}
 	scroll(el) {
         console.log(el);
         var offset = document.getElementById("navbar").offsetHeight;
@@ -55,7 +51,12 @@ export default class Footer extends React.Component{
                                         </Link>
 									</Col>
 									<Col>
-										<Button variant="light" onClick={this.handlePrivacy}>Disclaimer</Button>
+									    <Link
+                                          to={"/disclaimer#disclaimer"}
+                                          scroll={el => this.scroll(el)}
+                                        >
+                                        <Button variant="light">Disclaimer</Button>
+                                        </Link>
 									</Col>
 								</Row>
 							</Container>
