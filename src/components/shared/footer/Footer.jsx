@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col, Container, Button, Nav} from 'react-bootstrap';
+import {Row, Col, Container, Button} from 'react-bootstrap';
 import { HashLink as Link } from "react-router-hash-link";
 
 export default class Footer extends React.Component{
