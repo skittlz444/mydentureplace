@@ -47,7 +47,12 @@ export default class Footer extends React.Component{
                                         </Link>
 									</Col>
 									<Col>
-										<Button variant="light" onClick={this.handlePrivacy}>Terms of Use</Button>
+									    <Link
+                                          to={"/termofuse#termofuse"}
+                                          scroll={el => this.scroll(el)}
+                                        >
+                                        <Button variant="light">Terms of Use</Button>
+                                        </Link>
 									</Col>
 									<Col>
 										<Button variant="light" onClick={this.handlePrivacy}>Disclaimer</Button>
