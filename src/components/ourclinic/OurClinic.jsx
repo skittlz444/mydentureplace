@@ -10,6 +10,22 @@ import image2 from './img/photo 3.JPG'
 import altImage from '@s/loadingimage/loading-image.gif'
 
 export default class OurClinic extends React.Component{
+    constructor(props) {
+        super(props);
+        this.scroll = this.scroll.bind(this);
+    }
+    scroll(el) {
+        console.log(el);
+        var offset = document.getElementById("navbar").offsetHeight;
+        offset = offset > 150 ? 56 : offset;
+        setTimeout(() => {
+          window.scrollTo({
+            top: el.offsetTop - offset,
+            left: 0,
+            behavior: "smooth"
+          });
+        }, 300);
+      }
 	render(){
 		return (
 			<React.Fragment>
@@ -26,6 +42,7 @@ export default class OurClinic extends React.Component{
 							    <LazyLoadImage
 							    src={image1}
 							    alt={altImage}
+							    effect="blur"
 							    className={styles.leftImage}
 							     />
 							</Col>
@@ -40,6 +57,7 @@ export default class OurClinic extends React.Component{
 							    <LazyLoadImage
                                 src={image2}
                                 alt={altImage}
+                                effect="blur"
                                 className={styles.rightImage}
                                  />
 							</Col>

@@ -24,6 +24,9 @@ export default class App extends React.Component {
         const aboutUsPromise = import('./components/aboutuspage/AboutUsPage');
         const FAQPromise = import('./components/faqpage/FAQPage');
         const FindUsPromise = import('./components/finduspage/FindUsPage');
+        const PrivacyPolicyPromise = import('./components/privacypage/PrivacyPolicyPage');
+        const TermOfUsePromise = import('./components/termofusepage/TermOfUsePage');
+        const DisclaimerPromise = import('./components/disclaimerpage/DisclaimerPage');
 
         const Home = React.lazy(() => homePromise);
         const NotFound = React.lazy(() => notFoundPromise);
@@ -31,6 +34,9 @@ export default class App extends React.Component {
         const AboutUsPage = React.lazy(() => aboutUsPromise);
         const FAQPage = React.lazy(() => FAQPromise);
         const FindUsPage = React.lazy(() => FindUsPromise);
+        const PrivacyPolicyPage = React.lazy(() => PrivacyPolicyPromise);
+        const TermOfUsePage = React.lazy(() => TermOfUsePromise);
+        const DisclaimerPage = React.lazy(() => DisclaimerPromise);
 
         const LoadingMessage = () => (
             <div style={{ textAlign: "center" }}>
@@ -52,6 +58,9 @@ export default class App extends React.Component {
                             <Route path="/aboutus" component={AboutUsPage} />
                             <Route path="/faq" component={FAQPage} />
                             <Route path="/findus" component={FindUsPage} />
+                            <Route path="/privacypolicy" component={PrivacyPolicyPage} />
+                            <Route path="/termofuse" component={TermOfUsePage} />
+                            <Route path="/disclaimer" component={DisclaimerPage} />
                             <Route component={NotFound} />
                         </Switch>
                     </Suspense>

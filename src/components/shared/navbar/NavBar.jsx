@@ -95,7 +95,7 @@ export default class NavBar extends React.Component {
               <Nav.Link as="span" eventKey>
                 <Link
                   className={" nav-link"}
-                  to={"/contact"}
+                  to={"/contact#contact"}
                   scroll={el => this.scroll(el)}
                 >
                   Send us a Message!
