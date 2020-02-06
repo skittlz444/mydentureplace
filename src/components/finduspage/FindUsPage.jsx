@@ -32,7 +32,7 @@ export default class FindUsPage extends React.Component {
                 longitude: 152.834024,
                 zoom: 15,
                 width:"100%",
-                height:"100%"
+                height:"500px"
             }
         }
     }
