@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from './styles/FindUsPage.module.css';
 
@@ -82,11 +82,13 @@ export default class FindUsPage extends React.Component {
                           {...viewport}
                           mapStyle={'mapbox://styles/kevinkam123/ck66b3tat3cgd1jlo17eeqkr8'}
                           mapboxApiAccessToken={process.env.REACT_APP_MAPS_TOKEN}
+                          onViewportChange={viewport => {this.setState({viewport:viewport});}}
                         >
                         <div style={{position: 'absolute', right: 0}}>
                             <NavigationControl />
                         </div>
                         <Marker key={1} latitude={-25.284515} longitude={152.834024}>
+                            <a href="https://goo.gl/maps/FYdH38oZWtT9rD1v5" target="_blank">
                             <svg
                                   height={MARKER_SIZE}
                                   viewBox="0 0 24 24"
@@ -99,6 +101,7 @@ export default class FindUsPage extends React.Component {
                                 >
                                 <path d={ICON} />
                             </svg>
+                            </a>
                         </Marker>
                         </ReactMapGL>
                         </Col>
