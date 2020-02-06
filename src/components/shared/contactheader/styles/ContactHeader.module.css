@@ -17,7 +17,18 @@
 .headerContainer{
 	max-width:100% !important;
 	/*background-color:#FBEEC1;*/
-	height: 20vh;
+}
+
+@media (min-width: 1301){
+    .headerContainer{
+        height: 20vh !important;
+    }
+}
+
+@media (max-width: 1300) {
+    .headerContainer{
+        height: 30vh !important;
+    }
 }
 
 .headerImage{

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from './styles/FindUsPage.module.css';
 
@@ -32,7 +32,7 @@ export default class FindUsPage extends React.Component {
                 longitude: 152.834024,
                 zoom: 15,
                 width:"100%",
-                height:"100vh"
+                height:"100%"
             }
         }
     }
@@ -88,7 +88,9 @@ export default class FindUsPage extends React.Component {
                             <NavigationControl />
                         </div>
                         <Marker key={1} latitude={-25.284515} longitude={152.834024}>
-                            <a href="https://goo.gl/maps/FYdH38oZWtT9rD1v5" target="_blank">
+                            <a href="https://www.google.com/maps/search/?api=1&query=my+denture+place"
+                            target="_blank"
+                            rel="noopener noreferrer">
                             <svg
                                   height={MARKER_SIZE}
                                   viewBox="0 0 24 24"

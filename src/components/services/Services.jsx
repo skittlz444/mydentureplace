@@ -47,6 +47,9 @@ export default class Services extends React.Component{
                       effect="blur"
                       className={styles.servicesImage}
                      />
+                    <div>
+                    &#8650; Learn More &#8650;
+                    </div>
                       </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
@@ -89,6 +92,9 @@ export default class Services extends React.Component{
                           effect="blur"
                           className={styles.servicesImage}
                          />
+                        <div>
+                        &#8650; Learn More &#8650;
+                        </div>
                       </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="1">
@@ -117,6 +123,9 @@ export default class Services extends React.Component{
                             effect="blur"
                             className={styles.servicesImage}
                            />
+                           <div>
+                           &#8650; Learn More &#8650;
+                           </div>
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="2">
