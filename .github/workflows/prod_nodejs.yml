@@ -1,0 +1,39 @@
+name: Node.js Test and Deploy Production
+
+on:
+  push:
+    branches:
+    - production
+
+jobs:
+  test-and-deploy:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: npm install
+    - run: npm run-script test a
+    - run: npm run-script build
+      env:
+        REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_REACT_APP_MAPS_TOKEN }}
+        REACT_APP_API_URL: ${{ secrets.MYDENTUREPLACE_PRODUCTION_API_URL }}
+        CI: true
+    - name: S3 Sync
+      uses: jakejarvis/s3-sync-action@v0.5.1
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.MYDENTUREPLACE_PRODUCTION_AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.MYDENTUREPLACE_DEPLOY_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.MYDENTUREPLACE_DEPLOY_AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-southeast-2'
+        SOURCE_DIR: 'build'
+    - name: Remove build
+      uses: JesseTG/rm@v1.0.0
+      with:
+        path: build
