@@ -18,6 +18,8 @@ jobs:
         node-version: '12.x'
     - run: npm install
     - run: npm run-script test a
+      env:
+        CI: true
     - run: npm run-script build
       env:
         REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_REACT_APP_MAPS_TOKEN }}
