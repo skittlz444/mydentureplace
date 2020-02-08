@@ -16,11 +16,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - run: npm install
-    - run: npm run-script test a
+        
+    - name: Install Dependencies
+      run: npm install
+    - name: Run Tests
+      run: npm run-script test a
       env:
         CI: true
-    - run: npm run-script build
+    - name: Build App
+      run: npm run-script build
       env:
         CI: true
         REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_REACT_APP_MAPS_TOKEN }}
