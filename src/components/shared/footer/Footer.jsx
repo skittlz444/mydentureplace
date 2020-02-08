@@ -2,6 +2,10 @@ import React from 'react';
 import {Row, Col, Container, Button} from 'react-bootstrap';
 import { HashLink as Link } from "react-router-hash-link";
 
+import MediaQuery from 'react-responsive';
+
+const SMALL_MOBILE_WIDTH = 600;
+
 export default class Footer extends React.Component{
 	constructor(props){
 		super(props);
@@ -34,7 +38,8 @@ export default class Footer extends React.Component{
 									</Row>
 								</Container>
 								<Row>
-									<Col>
+								<MediaQuery maxWidth={SMALL_MOBILE_WIDTH}>
+									<Col xs={12}>
                                         <Link
                                           to={"/privacypolicy#privacypolicy"}
                                           scroll={el => this.scroll(el)}
@@ -42,7 +47,7 @@ export default class Footer extends React.Component{
                                         <Button variant="light">Privacy Policy</Button>
                                         </Link>
 									</Col>
-									<Col>
+									<Col xs={12}>
 									    <Link
                                           to={"/termofuse#termofuse"}
                                           scroll={el => this.scroll(el)}
@@ -50,7 +55,7 @@ export default class Footer extends React.Component{
                                         <Button variant="light">Terms of Use</Button>
                                         </Link>
 									</Col>
-									<Col>
+									<Col xs={12}>
 									    <Link
                                           to={"/disclaimer#disclaimer"}
                                           scroll={el => this.scroll(el)}
@@ -58,6 +63,33 @@ export default class Footer extends React.Component{
                                         <Button variant="light">Disclaimer</Button>
                                         </Link>
 									</Col>
+                                </MediaQuery>
+								<MediaQuery minWidth={SMALL_MOBILE_WIDTH+1}>
+								<Col>
+                                    <Link
+                                      to={"/privacypolicy#privacypolicy"}
+                                      scroll={el => this.scroll(el)}
+                                    >
+                                    <Button variant="light">Privacy Policy</Button>
+                                    </Link>
+                                </Col>
+                                <Col>
+                                    <Link
+                                      to={"/termofuse#termofuse"}
+                                      scroll={el => this.scroll(el)}
+                                    >
+                                    <Button variant="light">Terms of Use</Button>
+                                    </Link>
+                                </Col>
+                                <Col>
+                                    <Link
+                                      to={"/disclaimer#disclaimer"}
+                                      scroll={el => this.scroll(el)}
+                                    >
+                                    <Button variant="light">Disclaimer</Button>
+                                    </Link>
+                                </Col>
+								</MediaQuery>
 								</Row>
 							</Container>
 						</Col>	
