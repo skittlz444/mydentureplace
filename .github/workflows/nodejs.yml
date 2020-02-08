@@ -1,0 +1,24 @@
+name: Node.js Test
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm run-script install
+    - run: npm run-script test
+      env:
+        CI: true
+        REACT_APP_MAPS_TOKEN: pk.eyJ1Ijoia2V2aW5rYW0xMjMiLCJhIjoiY2s2NmFhaXFmMTQ4aTNlbzhocGxibTZqYiJ9.zzH6FWL717qrOeerOKAHnA
