@@ -6,24 +6,7 @@ on:
     - production
 
 jobs:
-  test:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@production
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - run: npm install
-    - run: npm run-script test a
-      env:
-        CI: true
-        REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_REACT_APP_MAPS_TOKEN }}
-        REACT_APP_API_URL: ${{ secrets.MYDENTUREPLACE_PRODUCTION_API_URL }}
-        
-  deploy:
+  test-and-deploy:
 
     runs-on: ubuntu-latest
     
@@ -34,9 +17,11 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install
+    - run: npm run-script test a
     - run: npm run-script build
       env:
         REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_REACT_APP_MAPS_TOKEN }}
+        REACT_APP_API_URL: ${{ secrets.MYDENTUREPLACE_PRODUCTION_API_URL }}
         CI: true
     - name: S3 Sync
       uses: jakejarvis/s3-sync-action@v0.5.1
