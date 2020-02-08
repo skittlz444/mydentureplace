@@ -19,9 +19,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run-script test a
+    - run: npm run-script build
     - uses: jakejarvis/s3-sync-action@v0.5.1
       with:
         args: --acl public-read --follow-symlinks --delete
+    - uses: JesseTG/rm@v1.0.0
+      with:
+        path: build
       env:
         CI: true
         REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_STAGING_REACT_APP_MAPS_TOKEN }}
