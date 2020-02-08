@@ -92,7 +92,7 @@ export default class FindUsPage extends React.Component {
                                 <NavigationControl />
                             </div>
                             <Marker key={1} latitude={-25.284515} longitude={152.834024}>
-                                <a href="geo:-25.284515,152.834024;u=35"
+                                <a href="geo:-25.284515,152.834024?q=37.6894694,-121.000303(My Denture Place)"
                                 target="_blank"
                                 rel="noopener noreferrer">
                                 <svg
