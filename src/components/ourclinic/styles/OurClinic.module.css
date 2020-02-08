@@ -6,10 +6,12 @@
 
 @media (max-width: 1350px){
 	.leftImage{
+	    width: 100% !important;
 		max-height: 13rem;
 		padding-bottom: 2rem;
 	}	
 	.rightImage{
+	    width: 100% !important;
 		max-height: 13rem;
 		padding-bottom: 2rem;
 	}
