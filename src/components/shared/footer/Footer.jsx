@@ -37,31 +37,37 @@ export default class Footer extends React.Component{
 										Your First Impression is a Lasting Impression
 									</Row>
 								</Container>
-								<Row>
+								<Row className={"justify-content-center"}>
 								<MediaQuery maxWidth={SMALL_MOBILE_WIDTH}>
-									<Col xs={12}>
+									<Col xs={12} style={{marginBottom: "5px"}}>
+									    <Row className={"justify-content-center"}>
                                         <Link
                                           to={"/privacypolicy#privacypolicy"}
                                           scroll={el => this.scroll(el)}
                                         >
                                         <Button variant="light">Privacy Policy</Button>
                                         </Link>
+                                        </Row>
 									</Col>
-									<Col xs={12}>
+									<Col xs={12} style={{marginBottom: "5px"}}>
+									    <Row className={"justify-content-center"}>
 									    <Link
                                           to={"/termofuse#termofuse"}
                                           scroll={el => this.scroll(el)}
                                         >
                                         <Button variant="light">Terms of Use</Button>
                                         </Link>
+                                        </Row>
 									</Col>
-									<Col xs={12}>
+									<Col xs={12} style={{marginBottom: "5px"}}>
+									    <Row className={"justify-content-center"}>
 									    <Link
                                           to={"/disclaimer#disclaimer"}
                                           scroll={el => this.scroll(el)}
                                         >
                                         <Button variant="light">Disclaimer</Button>
                                         </Link>
+                                        </Row>
 									</Col>
                                 </MediaQuery>
 								<MediaQuery minWidth={SMALL_MOBILE_WIDTH+1}>
