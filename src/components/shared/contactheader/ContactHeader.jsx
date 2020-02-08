@@ -25,7 +25,7 @@ export default class ContactHeader extends React.Component{
 							</Col>
 							<Col md={{order:1}} className={styles.lgContactInfo + ' justify-content-end wow fadeInDown delay-1s flex'}>
 								<div>
-									<MediaQuery minWidth={800}>
+									<MediaQuery minWidth={1300}>
 										<h3 className={styles.phone}>
 											<a className={styles.headerAction} href="tel:0741240800">07 4124 0800</a>
 										</h3>

@@ -4,11 +4,14 @@ import styles from './styles/FindUsPage.module.css';
 
 import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl';
 
+import MediaQuery from 'react-responsive';
+
 const ICON = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,4.5,2,10c0,2,0.6,3.9,1.6,5.4c0,0.1,0.1,0.2,0.2,0.3
   c0,0,0.1,0.1,0.1,0.2c0.2,0.3,0.4,0.6,0.7,0.9c2.6,3.1,7.4,7.6,7.4,7.6s4.8-4.5,7.4-7.5c0.2-0.3,0.5-0.6,0.7-0.9
   C20.1,15.8,20.2,15.8,20.2,15.7z`;
 const MARKER_SIZE = 20;
-console.log(process.env)
+
+const MOBILE_WIDTH = 1000;
 
 export default class FindUsPage extends React.Component {
     constructor(props){
@@ -77,6 +80,38 @@ export default class FindUsPage extends React.Component {
                         </p>
                         </Col>
                         <Col lg={5} md={12}>
+                        <MediaQuery maxWidth={MOBILE_WIDTH}>
+                        <ReactMapGL
+                              {...settings}
+                              {...viewport}
+                              mapStyle={'mapbox://styles/kevinkam123/ck66b3tat3cgd1jlo17eeqkr8'}
+                              mapboxApiAccessToken={process.env.REACT_APP_MAPS_TOKEN}
+                              onViewportChange={viewport => {this.setState({viewport:viewport});}}
+                            >
+                            <div style={{position: 'absolute', right: 0}}>
+                                <NavigationControl />
+                            </div>
+                            <Marker key={1} latitude={-25.284515} longitude={152.834024}>
+                                <a href="geo:-25.284515,152.834024?q=37.6894694,-121.000303(My Denture Place)"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <svg
+                                      height={MARKER_SIZE}
+                                      viewBox="0 0 24 24"
+                                      style={{
+                                        cursor: 'pointer',
+                                        fill: '#d00',
+                                        stroke: 'none',
+                                        transform: `translate(${-MARKER_SIZE / 2}px,${-MARKER_SIZE}px)`
+                                      }}
+                                    >
+                                    <path d={ICON} />
+                                </svg>
+                                </a>
+                            </Marker>
+                            </ReactMapGL>
+                        </MediaQuery>
+                        <MediaQuery minWidth={MOBILE_WIDTH+1}>
                         <ReactMapGL
                           {...settings}
                           {...viewport}
@@ -106,6 +141,7 @@ export default class FindUsPage extends React.Component {
                             </a>
                         </Marker>
                         </ReactMapGL>
+                        </MediaQuery>
                         </Col>
                         </Row>
                     </Container>
