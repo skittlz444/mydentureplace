@@ -1,4 +1,4 @@
-name: Node.js Test and Deploy Staging
+name: Node.js Deploy Staging
 
 on: [push]
 
@@ -18,7 +18,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm run-script test a
     - run: npm run-script build
     - uses: jakejarvis/s3-sync-action@v0.5.1
       with:
