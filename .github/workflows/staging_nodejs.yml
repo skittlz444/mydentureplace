@@ -16,13 +16,19 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - run: npm install
-    - run: npm run-script test a
-    - run: npm run-script build
+        
+    - name: Install Dependencies
+      run: npm install
+    - name: Run Tests
+      run: npm run-script test a
       env:
+        CI: true
+    - name: Build App
+      run: npm run-script build
+      env:
+        CI: true
         REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_REACT_APP_MAPS_TOKEN }}
         REACT_APP_API_URL: ${{ secrets.MYDENTUREPLACE_STAGING_API_URL }}
-        CI: true
     - name: S3 Sync
       uses: jakejarvis/s3-sync-action@v0.5.1
       with:
