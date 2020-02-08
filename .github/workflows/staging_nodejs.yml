@@ -12,6 +12,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+      with:
+        repository: 'skittlz444/mydentureplace'
+        ref: 'master'
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
