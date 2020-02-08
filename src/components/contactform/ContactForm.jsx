@@ -6,6 +6,8 @@ import styles from "./styles/ContactForm.module.css";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
+console.log(process.env);
+
 export default class ContactForm extends React.Component {
     constructor(props) {
         super(props);
@@ -47,7 +49,7 @@ export default class ContactForm extends React.Component {
         } else {
             this.setState({ loading: true });
             toast.dismiss();
-            fetch("https://bp4pucafj0.execute-api.ap-southeast-2.amazonaws.com/v1/contact", {
+            fetch(process.env.REACT_APP_CONTACT_FORM_API_URL, {
                 method: 'POST',
                 headers: {
                     "Content-type": "application/x-www-form-urlencoded",
