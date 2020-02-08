@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm run-script test
+    - run: npm run-script test a
     - run: npm run-script build
     - uses: jakejarvis/s3-sync-action@v0.5.1
       with:
@@ -27,10 +27,10 @@ jobs:
       with:
         path: build
       env:
-        CI: true
         REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_STAGING_REACT_APP_MAPS_TOKEN }}
         AWS_S3_BUCKET: ${{ secrets.MYDENTUREPLACE_STAGING_AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.MYDENTUREPLACE_DEPLOY_AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.MYDENTUREPLACE_DEPLOY_AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'ap-southeast-2'   # optional: defaults to us-east-1
-        SOURCE_DIR: 'build'      # optional: defaults to entire repository
+        AWS_REGION: 'ap-southeast-2'
+        SOURCE_DIR: 'build'
+        CI: true
