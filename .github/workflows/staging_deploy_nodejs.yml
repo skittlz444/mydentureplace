@@ -1,9 +1,29 @@
-name: Node.js Deploy Staging
+name: Node.js Test and Deploy Staging
 
 on: [push]
 
 jobs:
-  test-and-deploy:
+  test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run-script test a
+      env:
+        CI: true
+        REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_STAGING_REACT_APP_MAPS_TOKEN }}
+        
+  deploy:
 
     runs-on: ubuntu-latest
 
@@ -26,10 +46,10 @@ jobs:
       with:
         path: build
       env:
-        REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_STAGING_REACT_APP_MAPS_TOKEN }}
         AWS_S3_BUCKET: ${{ secrets.MYDENTUREPLACE_STAGING_AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.MYDENTUREPLACE_DEPLOY_AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.MYDENTUREPLACE_DEPLOY_AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'ap-southeast-2'
         SOURCE_DIR: 'build'
+        REACT_APP_MAPS_TOKEN: ${{ secrets.MYDENTUREPLACE_STAGING_REACT_APP_MAPS_TOKEN }}
         CI: true
