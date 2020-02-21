@@ -16,7 +16,7 @@ export default class PrivacyPolicyPage extends React.Component {
                         <hr/>
                         <Row className="justify-content-left flex">
                             <p className={styles.privacyPolicyText}>
-                                Updated February 2020 This following document sets forth the Privacy Policy for the MyDenturePlace website, <a className={styles.privacyPolicyLink} href="www.mydentureplace.com.au">www.mydentureplace.com.au</a>. MyDenturePlace is committed to providing you with the best possible customer service experience. MyDenturePlace is bound by the Privacy Act 1988 (Cth), which sets out a number of principles concerning the privacy of individuals.
+                                Updated February 2020 This following document sets forth the Privacy Policy for the MyDenturePlace website, <a className={styles.privacyPolicyLink} href="http://www.mydentureplace.com.au">www.mydentureplace.com.au</a>. MyDenturePlace is committed to providing you with the best possible customer service experience. MyDenturePlace is bound by the Privacy Act 1988 (Cth), which sets out a number of principles concerning the privacy of individuals.
                             </p>
                             <h4>Collection of your personal information</h4>
                             <p className={styles.privacyPolicyText}>
