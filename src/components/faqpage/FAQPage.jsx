@@ -107,7 +107,7 @@ export default class FAQPage extends React.Component {
                         </Row>
                         <Row className="justify-content-left flex">
                             <p className={styles.faqText}>
-                            You can pay by Credit Card, Cheque or Cash.
+                            You can pay by Credit Card, EFTPOS, Cheque or Cash.
                             </p>
                             <p className={styles.faqText}>
                             A deposit will be required before any laboratory work is started. We will let you know in advance of the amount. The deposit is usually 50%.
