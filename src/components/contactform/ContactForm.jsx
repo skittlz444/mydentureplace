@@ -11,6 +11,7 @@ export default class ContactForm extends React.Component {
         super(props);
         this.state = {
             contactName: "",
+            contactPhone: "",
             contactEmail: "",
             contactSubject: "",
             contactBody: "",
@@ -32,10 +33,27 @@ export default class ContactForm extends React.Component {
         this.setState({ [e.target.id]: e.target.value });
     }
 
-    handleSubmit = e => {
+    handleSubmit = async e => {
         e.preventDefault();
         e.stopPropagation();
-        
+        let letters = /^[A-Za-z`!@#$%^&*()_+\-={};':"\\|,.<>?~]+$/;
+        await this.setState({contactPhone: this.state.contactPhone.replace(/\s/g,'')});
+        if (this.state.contactPhone.match(letters)) {
+            this.setState({
+                'toastID': toast.error(
+                    <span className={styles.whiteText}>Please enter a valid phone number. It should not contain letters or special characters.</span>,
+                    { autoClose: false })
+            });
+            return;
+        } else if (this.state.contactPhone.length !== 10) {
+            this.setState({
+                'toastID': toast.error(
+                    <span className={styles.whiteText}>Please enter a valid phone number. It should be contain 10 numbers.</span>,
+                    { autoClose: false })
+            });
+            return;
+        }
+
         if (!this.validate()) {
             if (!toast.isActive(this.state.toastID))
                 this.setState({
@@ -54,6 +72,7 @@ export default class ContactForm extends React.Component {
                 },
                 body: `{
    					"contactName" : "${this.state.contactName}",
+   					"contactPhone" : "${this.state.contactPhone}"
    					"contactEmail" :"${this.state.contactEmail}",
    					"contactSubject" : "${this.state.contactSubject}",
    					"contactBody" : "${this.state.contactBody}"
@@ -137,6 +156,18 @@ export default class ContactForm extends React.Component {
                                     <Form.Text className="text-muted">
                                         We'll never share your email with anyone else.
                                     </Form.Text>
+                                </Form.Group>
+                            </Col>
+
+                            <Col lg={12} xs={12} sm={12} md={12}>
+                                <Form.Group controlId="contactPhone">
+                                    <Form.Label><h3 className={styles.formLabel}>Your Phone Number</h3></Form.Label>
+                                    <Form.Control
+                                        size="lg"
+                                        placeholder="Please enter your phone number"
+                                        onChange={this.handleChange}
+                                        required
+                                    />
                                 </Form.Group>
                             </Col>
 
