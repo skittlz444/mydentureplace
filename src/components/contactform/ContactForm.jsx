@@ -48,7 +48,7 @@ export default class ContactForm extends React.Component {
         } else if (this.state.contactPhone.length !== 10) {
             this.setState({
                 'toastID': toast.error(
-                    <span className={styles.whiteText}>Please enter a valid phone number. It should be contain 10 numbers.</span>,
+                    <span className={styles.whiteText}>Please enter a valid phone number. It should be contain 10 numbers. E.g. 0432 874 672</span>,
                     { autoClose: false })
             });
             return;
