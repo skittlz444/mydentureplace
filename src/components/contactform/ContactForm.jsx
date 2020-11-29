@@ -36,23 +36,7 @@ export default class ContactForm extends React.Component {
     handleSubmit = async e => {
         e.preventDefault();
         e.stopPropagation();
-        let letters = /^[A-Za-z`!@#$%^&*()_+\-={};':"\\|,.<>?~]+$/;
         await this.setState({contactPhone: this.state.contactPhone.replace(/\s/g,'')});
-        if (this.state.contactPhone.match(letters)) {
-            this.setState({
-                'toastID': toast.error(
-                    <span className={styles.whiteText}>Please enter a valid phone number. It should not contain letters or special characters.</span>,
-                    { autoClose: false })
-            });
-            return;
-        } else if (this.state.contactPhone.length !== 10) {
-            this.setState({
-                'toastID': toast.error(
-                    <span className={styles.whiteText}>Please enter a valid phone number. It should be contain 10 numbers. E.g. 0432 874 672</span>,
-                    { autoClose: false })
-            });
-            return;
-        }
 
         if (!this.validate()) {
             if (!toast.isActive(this.state.toastID))
