@@ -56,7 +56,7 @@ export default class ContactForm extends React.Component {
                 },
                 body: `{
    					"contactName" : "${this.state.contactName}",
-   					"contactPhone" : "${this.state.contactPhone}"
+   					"contactPhone" : "${this.state.contactPhone}",
    					"contactEmail" :"${this.state.contactEmail}",
    					"contactSubject" : "${this.state.contactSubject}",
    					"contactBody" : "${this.state.contactBody}"
