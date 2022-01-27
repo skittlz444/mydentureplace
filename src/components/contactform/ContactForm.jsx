@@ -69,7 +69,7 @@ export default class ContactForm extends React.Component {
                         this.setState({
                             'toastID': toast.success(
                                 <span className={styles.whiteText}>Thank you for submitting a contact request!
-                                I'll be in touch within the next few days so keep an eye out in your emails,
+                                We'll be in touch within the next few days so keep an eye out in your emails,
     						including your junk folder.</span>,
                                 { autoClose: false })
                         });
